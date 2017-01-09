@@ -198,7 +198,7 @@ DEPENDENCIES
   jquery-rails (= 4.1.1)
   listen (= 3.0.8)
   minitest-reporters (= 1.1.9)
-  mysql2 (~> 0.3.18)
+  mysql2
   pg (= 0.18.4)
   puma (= 3.4.0)
   rails (= 5.0.1)
