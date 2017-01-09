@@ -48,7 +48,10 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  socket: /var/run/mysqld/mysqld.sock
   database: OverTrack_production
   username: OverTrack
   password: <%= ENV['OVERTRACK_DATABASE_PASSWORD'] %>
