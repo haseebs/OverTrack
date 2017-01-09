@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'pages/home'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'application#test'
+  root 'pages#home'
+  get '/signup', to:  'users/new'
 end
