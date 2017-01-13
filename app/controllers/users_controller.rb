@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :user_logged_in, only: [:edit, :update]
+  before_action :user_belongs, only: [:edit, :update]
+
   def new
     @user = User.new
   end
@@ -20,6 +23,29 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(permitted_params)
+      flash[:success] = "Update successful"
+      redirect_to root_url
+    else
+      render 'edit'
+    end
+  end
+
+  def user_logged_in
+    if !logged_in?
+      flash[:danger] = "Please log in"
+      redirect_to login_url
+    end
+  end
+
+  def user_belongs
+    unless User.find(params[:id]) == cur_user
+      redirect_to root_url
+    end
   end
 
   def permitted_params
