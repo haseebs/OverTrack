@@ -77,6 +77,8 @@ GEM
     guard-minitest (2.4.4)
       guard-compat (~> 1.2)
       minitest (>= 3.0)
+    haml (4.0.7)
+      tilt
     i18n (0.7.0)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -202,6 +204,7 @@ DEPENDENCIES
   coffee-rails (= 4.2.1)
   guard (= 2.13.0)
   guard-minitest (= 2.4.4)
+  haml (= 4.0.7)
   jbuilder (= 2.4.1)
   jquery-rails (= 4.1.1)
   listen (= 3.0.8)

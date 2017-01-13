@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rake',         '12.0.0'
+gem 'haml',         '4.0.7'
 gem 'rails',        '5.0.1'
 gem 'bootstrap-sass', '3.3.6'
 gem 'bcrypt',       '3.1.11'
