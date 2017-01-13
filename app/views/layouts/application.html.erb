@@ -10,11 +10,11 @@
   </head>
 
   <body>
-    <%= render 'layouts/header.haml.erb' %>
+    <%= render 'layouts/header' %>
 
     <%= yield %>
 
-    <%= render 'layouts/footer.haml.erb' %>
+    <%= render 'layouts/footer' %>
 
     <%= debug(params) if Rails.env.development? %>
   </body>
