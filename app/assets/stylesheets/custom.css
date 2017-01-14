@@ -49,6 +49,11 @@ p {
   line-height: 1.7em;
 }
 
+/****Dark Theme****/
+.dark-theme{
+  background-color: #962D2E;
+  color: #F2EBC7;
+}
 /* header */
 #logo {
   float: left;
