@@ -9,6 +9,9 @@
     = render 'layouts/shim.html.erb'
   %body
     = render 'layouts/header'
-    = yield
+    %div.page-main-content
+      %div.container-fuild
+        %div.container.dark-theme
+          = yield
+          = debug(params) if Rails.env.development?
     = render 'layouts/footer'
-    = debug(params) if Rails.env.development?

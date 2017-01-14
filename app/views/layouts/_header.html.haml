@@ -1,8 +1,10 @@
-%header.navbar.navbar-fixed-top.navbar-inverse
+%header.transparent.navbar
   %div.container
-    = link_to "OverTrack", '#', id: "logo"
-    %nav
+    %div#logo-holder
+      = link_to "OverTracker", '#', id: "logo"
+    %nav.cs-nav
       %ul.nav.navbar-nav.navbar-right
         %li= link_to "Faqs",   '#'
         %li= link_to "Register", '#'
-        %li= link_to "Log in", '#'
+        %li{:class => 'csbuttons'}
+          = link_to "Log in", '#'
