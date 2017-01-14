@@ -1,6 +1,7 @@
 class MatchesController < ApplicationController
 
   def index
+    @matches = cur_user.matches
   end
 
   def new

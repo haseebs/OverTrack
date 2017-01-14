@@ -1,8 +1,8 @@
 class Match < ApplicationRecord
 
-  before_save :set_wld
-  before_save :set_rank_change
-  around_save :set_streaks
+  before_validation :set_wld
+  before_validation :set_rank_change
+  before_save :set_streaks
 
   NUM_MAPS = 14
   MAX_RANK = 5000
@@ -38,24 +38,25 @@ class Match < ApplicationRecord
   def set_streaks
     if prev_match.nil?
       if self.wld == 1
-        self.winstreak += 1
+        self.winstreak = 1
         self.losestreak = 0
       elsif self.wld == 2
         self.winstreak = 0
-        self.losestreak += 1
+        self.losestreak = 1
       elsif self.wld == 3
-        self.winstreak = prev_match.winstreak
-        self.losestreak = prev_match.losestreak
+        self.winstreak = 0
+        self.losestreak = 0
       end
+      return
     end
 
-    if prev_match.wld == 1
-      self.winstreak += 1
+    if (prev_match.wld == 1 && self.wld == 1) || (prev_match.wld == 2 && self.wld == 1) || (prev_match.wld == 3 && self.wld == 1)
+      self.winstreak = prev_match.winstreak + 1
       self.losestreak = 0
-    elsif prev_match.wld == 2
+    elsif (prev_match.wld == 2 && self.wld == 2) || (prev_match.wld == 1 && self.wld == 2) || (prev_match.wld == 3 && self.wld == 2)
       self.winstreak = 0
-      self.losestreak += 1
-    elsif prev_match.wld == 3
+      self.losestreak = prev_match.losestreak + 1
+    elsif self.wld == 3
       self.winstreak = prev_match.winstreak
       self.losestreak = prev_match.losestreak
     end
