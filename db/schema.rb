@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170114164416) do
+ActiveRecord::Schema.define(version: 20170114194911) do
+
+  create_table "heros", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "hero"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_heros_on_user_id", using: :btree
+  end
 
   create_table "matches", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "map"
@@ -38,5 +44,6 @@ ActiveRecord::Schema.define(version: 20170114164416) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
+  add_foreign_key "heros", "users"
   add_foreign_key "matches", "users"
 end

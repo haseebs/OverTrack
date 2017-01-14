@@ -26,9 +26,8 @@ class MatchesController < ApplicationController
   def destroy
   end
 
-  #dont forget to add heroes
   def matches_params
-    params.require(:match).permit(:rank, :video_link, :notes, :map, :group_size)
+    params.require(:match).permit(:rank, :video_link, :notes, :map, :group_size, heros_attributes: [:id, :hero])
   end
 
 end
