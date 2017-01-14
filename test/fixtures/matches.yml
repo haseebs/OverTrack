@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  map: 
+  rank: 
+  wld: 
+  notes: MyText
+  video_link: MyString
+  winstreak: 
+  losestreak: 
+  rank_change: 
+  user: one
+
+two:
+  map: 
+  rank: 
+  wld: 
+  notes: MyText
+  video_link: MyString
+  winstreak: 
+  losestreak: 
+  rank_change: 
+  user: two
