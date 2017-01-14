@@ -2,7 +2,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
 
-  def test
-    render html: "IT WORKED!"
+  def user_logged_in
+    if !logged_in?
+      flash[:danger] = "Please log in"
+      redirect_to login_url
+    end
   end
+
 end
