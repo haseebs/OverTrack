@@ -1,7 +1,7 @@
 
 %div.row
   %div.col-sm-6.col-sm-offset-3
-    = form_for(yield(:var1)) do |f|
+    = form_for(@user) do |f|
       = f.label :battletag, class: "field-labels", value: "Battle Tag:"
       = f.text_field :battletag, class: "input-fields", placeholder: "Enter Battle Tag\..."
       = f.label :email, class: "field-labels", value: "Email:"
