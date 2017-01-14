@@ -1,13 +1,17 @@
-
+%p Attributes that user needs to enter are map, heroes, rank and groupsize
+%p wow we didnt add groupsize in our erd, now I have to implement it
+%p heroes are not yet implemented on backend, so it may break, you should still be able to design it
 %div.row
-%  .col-md-6.col-md-offset-3
-//    = form_for(@user) do |f|
-//      = f.label :battletag
-//      = f.text_field :battletag, class: 'form-control'
-//      = f.label :email
-//      = f.email_field :email, class: 'form-control'
-//      = f.label :password
-//      = f.password_field :password, class: 'form-control'
-//      = f.label :password_confirmation, "Confirmation"
-//      = f.password_field :password_confirmation, class: 'form-control'
-//      = f.submit "Save changes", class: "btn btn-primary"
+  %div.col-md-6.col-md-offset-3
+    = form_for(@match) do |f|
+      = f.label :heros, class: "field-labels", value: "Heros:"
+      =f.fields_for :heros do |h|
+      
+      %p
+        %select{ :name => "question[question_status]" }
+          %option{:value => 1}= "label 1"
+          %option{:value => 2}= "label 2"
+      %p
+        = f.submit "Update"
+      %p
+        = link_to 'Back', :back
