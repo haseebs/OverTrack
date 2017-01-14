@@ -1,11 +1,188 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+$buttons:#962D2E;
+$dark:#343642;
+$light:#F2EBC7;
+$lightblue:#979C9C;
+$blue:#348899;
+$white:#FFF;
+$black:#000;
+$value: E6;
+$imp: !important;
+$tsc: #FFF0;
 
 
-body {
-  padding-top: 60px;
+/****Dark Theme****/
+.dark-theme{
+  background-color: $dark;
+  color: $light;
 }
 
+// Header
+header{
+  display: block;
+  position: relative;
+}
+//navigation bar
+.transparent{
+  background: $tsc $imp;
+}
+.transparent li a{
+  color: $lightblue;
+  font-weight: bold;
+}
+.nav > li > a:hover, .nav > li > a:focus{
+  background-color: $tsc $imp;
+  color: $light $imp;
+  transition: all 0.2s ease-in;
+}
+
+//Custom Login link
+.nav li.csbuttons a{
+  background-color: $tsc;
+  color:$light;
+  transition: all 0.2s ease-in;
+}
+.nav li.csbuttons a:hover,.nav li.csbuttons a:focus,
+form input.csbuttons:hover,form form input.csbuttons:hover{
+  background-color: $buttons+$imp;
+  color: $light $imp;
+  transition: background-color 0.3s ease-in;
+  transition: all 0.2s ease-out;
+}
+
+
+// Logo
+#logo-holder{
+  display:inline-block;
+  margin-bottom: 0px;
+}
+
+//input fields
+.field-labels {
+    margin-right: 1%;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: small;
+    word-wrap: break-word;
+    word-break: normal;
+    line-height: 1.2;
+    vertical-align: middle;
+    font-weight: lighter;
+}
+input.input-fields {
+    background-color: $white;
+    border: none;
+    border-radius: 4px;
+    color: $black;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    width: 100%;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 2px auto 15px;
+    transform: skew(-0.15rad);
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $dark;
+  opacity: 0.7;
+  font-size: 14px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $dark;
+  opacity: 0.7;
+  font-size: 14px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $dark;
+  opacity: 0.7;
+  font-size: 14px;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $dark;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+//custom login buttons
+.c-btn {
+    width: 50%;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 5px auto 50px;
+    transform: skew(-0.15rad);
+    position: relative;
+    display: block;
+}
+form input.csbuttons{
+  background-color: $lightblue;
+  color:$light;
+  transition: all 0.2s ease-in;
+}
+/*
+.c-btn--primary {
+    background-color: $buttons;
+    background-image:linear-gradient(-180deg, $dark 0, $buttons 100%);
+    color: $light;
+    transition: all 0.3s ease-in;
+}
+.c-btn--primary:hover, .c-btn--primary:focus, {
+    //background-color: $light $imp;
+    color: $buttons $imp;
+    transition: all 0.3s ease-in;
+}*/
+
+
+//Big Screens > 768px
+@media screen and (min-width: 768px) {
+  //navigation bar links
+  .nav > li {
+    padding: 6px 5px;
+  }
+  .nav > li > a{
+    margin: 5px;
+    padding: 5px 10px $imp;
+    border-radius: 2px;
+  }
+
+  //Custom Login button
+  .csbuttons a,
+  form input.csbuttons{
+    background-color: $blue $imp;
+    color: $light $imp;
+    transition: all 0.2s ease-in;
+  }
+  .nav li.csbuttons a:hover,.nav li.csbuttons a:focus{
+    background-color: $buttons+$value $imp;
+    color: $light $imp;
+    transition: background-color 0.3s ease-in;
+    transition: all 0.2s ease-out;
+  }
+
+}
+//middle secction
+.page-main-content{
+  //margin-top: -60px;
+}
+.page-main-content div.container{
+  //padding-top: 180px;
+}
+body {
+  background-color: $dark $imp;
+}
+.titletag{
+  margin-bottom: 25px;
+}
 section {
   overflow: auto;
 }
@@ -49,11 +226,7 @@ p {
   line-height: 1.7em;
 }
 
-/****Dark Theme****/
-.dark-theme{
-  background-color: #962D2E;
-  color: #F2EBC7;
-}
+
 /* header */
 #logo {
   float: left;
@@ -85,14 +258,20 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
+  bottom: 0px;
+  position: relative;
 }
 
 footer a {
-  color: #555;
+  color: $lightblue;
+  float: left;
+  margin-left: 5px;
+  text-decoration: none;
 }
 
-footer a:hover {
-  color: #222;
+footer a:hover, footer a:focus {
+  color: $light;
+  text-decoration: none;
 }
 
 footer small {
@@ -105,6 +284,47 @@ footer ul {
 }
 
 footer ul li {
+  display: inline-block;
   float: left;
-  margin-left: 15px;
+  margin-left: 5px;
+}
+footer ul li a{
+text-transform: uppercase;
+font-size: 12px;
+}
+
+//Responsive Design Changes
+@media screen and (max-width: 767px) {
+  footer div nav {
+      display: inline-block !important;
+      position: relative;
+      width: 100%;
+  }
+  footer ul {
+    float: none;
+    list-style: none;
+    margin: 0px auto !important;
+    position: relative;
+    text-align: center;
+    padding: 0px;
+    display: block;
+}
+  footer ul li {
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+    border-bottom: 0.4px solid $light;
+    padding: 10px 0px 8px;
+    text-align: center;
+
+ }
+ footer ul li a::last-element{
+   border-bottom:0px;
+ }
+ footer ul li a {
+    margin: 0px auto;
+    width: 100%;
+    font-size: 12px;
+}
 }

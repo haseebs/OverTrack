@@ -1,12 +1,13 @@
-%h1 Sessions#new
-%p Find me in app/views/sessions/new.html.erb
+%h1.titletag Login
+//%p Find me in app/views/sessions/new.html.erb
+
 .row
   .col-md-6.col-md-offset-3
     = form_for(:session, url: login_path) do |f|
-      = f.label :email
-      = f.email_field :email, class: 'form-control'
-      = f.label :password
-      = f.password_field :password, class: 'form-control'
-      = f.submit "Log in", class: "btn btn-primary"
+      = f.label :email, class:"field-labels", value: "Email :"
+      = f.email_field :email, class: 'form-control input-fields', placeholder:"Enter Your Email Address\..."
+      = f.label :password, class:"field-labels", value: "Password :"
+      = f.password_field :password, class: 'form-control input-fields', placeholder: "Enter Your Password\..."
+      = f.submit "Log in", class: "csbuttons c-btn c-btn--primary"
     %p
       New user? #{link_to "Sign up now!", signup_path}
