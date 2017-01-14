@@ -1,5 +1,9 @@
 class Match < ApplicationRecord
 
+  belongs_to :user
+  has_many :heros, dependent: :destroy
+  accepts_nested_attributes_for :heros
+
   before_validation :set_wld
   before_validation :set_rank_change
   before_save :set_streaks
@@ -7,7 +11,6 @@ class Match < ApplicationRecord
   NUM_MAPS = 14
   MAX_RANK = 5000
 
-  belongs_to :user
   default_scope -> { order(created_at: :desc) }
   validates :user_id, presence: true
   validates :map, presence: true, numericality: { greater_than: 0, less_than_or_equal_to: NUM_MAPS }
