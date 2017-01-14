@@ -35,12 +35,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def user_logged_in
-    if !logged_in?
-      flash[:danger] = "Please log in"
-      redirect_to login_url
-    end
-  end
 
   def user_belongs
     unless User.find(params[:id]) == cur_user
