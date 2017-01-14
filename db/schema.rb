@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113180327) do
+ActiveRecord::Schema.define(version: 20170114110756) do
+
+  create_table "matches", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "map"
+    t.integer  "rank"
+    t.integer  "wld"
+    t.text     "notes",       limit: 65535
+    t.string   "video_link"
+    t.integer  "winstreak"
+    t.integer  "losestreak"
+    t.integer  "rank_change"
+    t.integer  "user_id"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.index ["user_id", "created_at"], name: "index_matches_on_user_id_and_created_at", using: :btree
+    t.index ["user_id"], name: "index_matches_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
@@ -21,4 +37,5 @@ ActiveRecord::Schema.define(version: 20170113180327) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
+  add_foreign_key "matches", "users"
 end
