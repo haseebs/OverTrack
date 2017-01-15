@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170115151048) do
+ActiveRecord::Schema.define(version: 20170115175348) do
 
   create_table "group_stats", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "wins"
@@ -20,6 +20,18 @@ ActiveRecord::Schema.define(version: 20170115151048) do
     t.integer "group_size"
     t.integer "user_id"
     t.index ["user_id"], name: "index_group_stats_on_user_id", using: :btree
+  end
+
+  create_table "hero_stats", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "wins"
+    t.integer  "losses"
+    t.integer  "draws"
+    t.integer  "total_games"
+    t.integer  "hero"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["user_id"], name: "index_hero_stats_on_user_id", using: :btree
   end
 
   create_table "heros", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -42,6 +54,7 @@ ActiveRecord::Schema.define(version: 20170115151048) do
     t.datetime "updated_at",                                        null: false
     t.integer  "group_size",                        default: 1
     t.boolean  "group_stats_updated",               default: false
+    t.boolean  "hero_stats_updated",                default: false
     t.index ["user_id", "created_at"], name: "index_matches_on_user_id_and_created_at", using: :btree
     t.index ["user_id"], name: "index_matches_on_user_id", using: :btree
   end
@@ -56,6 +69,7 @@ ActiveRecord::Schema.define(version: 20170115151048) do
   end
 
   add_foreign_key "group_stats", "users"
+  add_foreign_key "hero_stats", "users"
   add_foreign_key "heros", "matches"
   add_foreign_key "matches", "users"
 end
