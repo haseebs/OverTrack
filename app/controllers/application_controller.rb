@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
+  include ConstantsHelper
 
   def user_logged_in
     if !logged_in?
