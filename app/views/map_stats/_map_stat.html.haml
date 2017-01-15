@@ -1,11 +1,17 @@
-%p
-= get_map_name(map_stat.map)
-= map_stat.wins
-= map_stat.losses
-= map_stat.draws
-= win_ratio(map_stat.wins, map_stat.total_games)
-\%
-= win_ratio(map_stat.total_games, @total_games)
-\%
-/the above one is played % write it as played
-= map_stat.total_games
+%tr
+  %td
+    = get_map_name(map_stat.map)
+  %td
+    = map_stat.wins
+  %td
+    = map_stat.losses
+  %td
+    = map_stat.draws
+  %td
+    = win_ratio(map_stat.wins, map_stat.total_games)
+    \%
+  %td
+    = win_ratio(map_stat.total_games, @total_games)
+    \%
+  %td
+    = map_stat.total_games

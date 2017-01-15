@@ -1,4 +1,28 @@
-%h1 HeroStats#index
-%p Find me in app/views/hero_stats/index.html.erb
-
-= render @hero_stats
+%section.white-section
+  %h1 HeroStats
+  %div.tbl-header
+    %table#keywords.matchesdatatable
+      %thead
+        %tr
+          %th
+            %span
+              Hero
+          %th
+            %span
+              Wins
+          %th
+            %span
+              Loses
+          %th
+            %span
+              Draws
+          %th
+            %span
+            Win Ratio
+          %th
+            %span
+            Total Games
+  %div.tbl-content
+    %table#keywords.matchesdatatable
+      %tbody
+        = render @hero_stats
