@@ -1,13 +1,29 @@
-%p
-= match.id
-= match.rank
-= match.winstreak
-= match.losestreak
-= get_wld(match.wld)
-/ I will fix wld
-= match.video_link
-= match.notes
-= get_map_name(match.map)
-= match.group_size
-- match.heros.each do |h|
-  = get_hero_name(h.hero)
+%tr
+  %td
+    = match.id
+  %td
+    = match.rank
+  %td
+    = get_wld(match.wld)
+  %td.wincolumn
+    = match.winstreak
+  %td.losecolumn
+    = match.losestreak
+  %td
+    = get_map_name(match.map)
+  %td
+    = match.group_size
+  %td
+    %span.csbuttons
+      = link_to "Link", "http://#{match.video_link}"
+  %td
+    = match.notes
+  %td
+    - match.heros.each do |h|
+      %span.heroimage
+        %img{:src => image_url("#{get_hero_name(h.hero)}.png"), title:"#{get_hero_name(h.hero)}", alt:"#{get_hero_name(h.hero)}"}
+  %td
+    %button.btn.btn-default.btn-xs{"aria-label" => "Left Align", :type => "button"}
+      %span.glyphicon.glyphicon.glyphicon-edit{"aria-hidden" => "true"}
+    %button.btn.btn-default.btn-xs{"aria-label" => "Left Align", :type => "button"}
+      %span.glyphicon.glyphicon-remove{"aria-hidden" => "true"}
