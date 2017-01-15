@@ -60,7 +60,7 @@ header{
 }
 .transparent li a{
   color: $mediumlight;
-  font-weight: bold;
+  font-weight: lighter;
 }
 .nav > li > a:hover, .nav > li > a:focus{
   background-color: $tsc $imp;
@@ -98,7 +98,7 @@ form input.csbuttons:hover,form form input.csbuttons:hover{
   .csbuttons a,
   form input.csbuttons{
     background-color: $lightblue $imp;
-    color: $light $imp;
+    color: $dark $imp;
     transition: all 0.2s ease-in;
   }
   .nav li.csbuttons a:hover,.nav li.csbuttons a:focus{
