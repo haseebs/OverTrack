@@ -189,10 +189,12 @@ form select{
   margin: 2px auto 15px;
   transform: skew(-0.15rad);
 }
+
 #new_match .input-fields-container{
   //width: 100%;
   display: inline-block;
 }
+
 //New Match Form Input fields
 #new_match input.input-fields{
   padding: 0px 15px;
@@ -202,6 +204,8 @@ form select{
 @media screen and (min-width: 768px) {
   #new_match .select-container {
       //width: 49%;
+      margin: 0px $imp;
+      
   }
   #new_match #mapsplayed{
       //width: 49%;
