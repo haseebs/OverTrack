@@ -1,3 +1,37 @@
 %p Attributes that user needs to enter are map, heroes, rank and groupsize
 %p wow we didnt add groupsize in our erd, now I have to implement it
 %p heroes are not yet implemented on backend, so it may break, you should still be able to design it
+
+%p Attributes that user needs to enter are map, heroes, rank and groupsize
+%p wow we didnt add groupsize in our erd, now I have to implement it
+%p heroes are not yet implemented on backend, so it may break, you should still be able to design it
+%div.row
+  %div.col-md-6.col-md-offset-3
+    = form_for(@match) do |f|
+      = f.label :map, class:"field-labels", value: "Maps"
+      = f.label :heros, class: "field-labels", value: "Heros:"
+      = f.fields_for :heros do |h|
+        %p
+          %select{ :name => "question[question_status]" }
+            %option{:value => 1}= "label 1"
+            %option{:value => 2}= "label 2"
+        %p
+          = f.submit "Update"
+      = f.label :rank
+      = f.text_field:rank, class:"form-control input-fields"
+      = f.label :groupsize
+      = f.text_field :groupsize, class: 'form-control  input-fields'
+
+
+= f.select :country_id,
+options_for_select(@countries.map{ |c| [c.name, c.id,
+  {'data-currency_code'=>c.currency_code}] })
+
+= options_for_select([ ['A', 1],
+                       ['B', 2],
+                       ['Madrid', 3],
+                       ['Madrid', 4],
+                       ['Madrid', 5],
+                       ['Madrid', 6],
+                       ['Madrid', 7]
+                      ], 1)
