@@ -1,4 +1,31 @@
-%h1 GroupStats#index
-%p Find me in app/views/group_stats/index.html.erb
+%section.white-section
+  %h1 Group Stats
 
-= render @group_stats
+  %div.tbl-header
+    %table#keywords.matchesdatatable
+      %thead
+        %tr
+          %th
+            %span
+              Group Size
+          %th
+            %span
+              Wins
+          %th
+            %span
+              Loses
+          %th
+            %span
+              Draws
+          %th
+            %span
+              Win Ratio
+          %th
+            %span
+              Total Games
+%div.tbl-content
+  %table#keywords.matchesdatatable
+    %tbody
+      = render @group_stats
+
+/group_stats byeok

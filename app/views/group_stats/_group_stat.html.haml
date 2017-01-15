@@ -1,8 +1,14 @@
-%p
-= group_stat.group_size
-= group_stat.wins
-= group_stat.losses
-= group_stat.draws
-= win_ratio(group_stat.wins, group_stat.total_games)
-\%
-= group_stat.total_games
+%tr
+  %td
+    = group_stat.group_size
+  %td
+    = group_stat.wins
+  %td
+    = group_stat.losses
+  %td
+    = group_stat.draws
+  %td
+    = win_ratio(group_stat.wins, group_stat.total_games)
+    \%
+  %td
+    = group_stat.total_games
