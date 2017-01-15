@@ -116,9 +116,10 @@ form input.csbuttons:hover,form form input.csbuttons:hover{
   margin-bottom: 0px;
 }
 
-//input fields
+// Form input fields
 .field-labels {
-    margin-right: 1%;
+  display: block;
+    margin-right: 0%;
     text-align: left;
     text-transform: uppercase;
     font-size: small;
@@ -163,6 +164,55 @@ input.input-fields {
   color: $dark;
   opacity: 0.7;
   font-size: 14px;
+}
+textarea{
+  transform: skew(-0.15rad);
+  margin-bottom: 25px !important;
+}
+//Form select fields
+.select-container {
+    //width: 100%;
+    display: inline-block;
+    margin: 0px auto;
+}
+form .select-container label {
+    margin-left: 2%;
+}
+form select{
+  height: 40px;
+  line-height: 40px;
+  padding: 0 5px;
+  width: 100%;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 2px auto 15px;
+  transform: skew(-0.15rad);
+}
+
+#new_match .input-fields-container{
+  //width: 100%;
+  display: inline-block;
+}
+
+//New Match Form Input fields
+#new_match input.input-fields{
+  padding: 0px 15px;
+  display: inline-block;
+}
+//Big Screens > 768px
+@media screen and (min-width: 768px) {
+  #new_match .select-container {
+      //width: 49%;
+      margin: 0px $imp;
+      
+  }
+  #new_match #mapsplayed{
+      //width: 49%;
+  }
+  #new_match #herosplayed{
+      //width: 49%;
+  }
 }
 
 //custom login buttons
@@ -212,7 +262,7 @@ body {
   background-color: $dark $imp;
 }
 .titletag{
-  text-transform: uppercase;
+  text-transform: capitalize;;
   font-size: x-large;
   font-weight: lighter !important;
   margin-bottom: 25px;
