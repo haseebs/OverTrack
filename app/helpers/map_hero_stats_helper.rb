@@ -1,0 +1,2 @@
+module MapHeroStatsHelper
+end

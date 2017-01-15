@@ -12,7 +12,8 @@ class MatchesController < ApplicationController
   end
 
   def create
-    @match = cur_user.matches.build(matches_params)
+    @match = cur_user.matches.create(matches_params)
+    @match.heros.build
     if @match.save
       flash[:success] = "Match Added!"
       redirect_to 'new'
