@@ -1,49 +1,55 @@
+%h1.titletag Add New Match
 %div.row
   %div.col-xs-6.col-xs-offset-3
     = form_for(@match) do |f|
-      = f.label :map, class:"field-labels", value: "Map Played:"
-      = f.select "map",
-      [["Select Map", 0],
-      ["Dorado", 1],
-      ["Eichenwalde", 2],
-      ["Hanamura", 3],
-      ["Hollywood", 4],
-      ["Ilios", 5],
-      ["King's Row", 6],
-      ["Lijang Tower", 7],
-      ["Nepal", 8],
-      ["Numbani", 9],
-      ["Oasis", 10],
-      ["Route 66", 11],
-      ["Temple of Anubis", 12],
-      ["Volskaya Industries", 13],
-      ["Watchpoint: Gibraltar", 14]]
-      = f.label :heros, class: "field-labels", value: "Hero Played:"
-      = f.fields_for :heros do |h|
-        = h.select "hero",
-        [["Ana", 1],
-        ["Bastion", 2],
-        ["D.Va", 3],
-        ["Genji", 4],
-        ["Hanzo", 5],
-        ["Junkrat", 6],
-        ["Lucio", 7],
-        ["Mcree", 8],
-        ["Mei", 9],
-        ["Mercy", 10],
-        ["Pharah", 11],
-        ["Reaper", 12],
-        ["Reinhardt", 13],
-        ["Roadhog", 14],
-        ["Soldier: 76", 15],
-        ["Sombra", 16],
-        ["Symmetra", 17],
-        ["Torbjorn", 18],
-        ["Widowmaker", 19],
-        ["Winston", 20],
-        ["Zarya", 21],
-        ["Zenyatta", 22]]
-      = f.label :rank, class:"field-labels", value: "Rank"
-      = f.text_field:rank, class:"form-control input-fields",  placeholder: "Enter Your Rank\..."
-      = f.label :group_size, class:"field-labels", value: "Group Size"
-      = f.number_field:group_size, class:"form-control input-fields", placeholder: "Enter Your Group Size\..."
+      %div.select-container#mapsplayed
+        = f.label :map, class:"field-labels", value: "Map Played:"
+        = f.select "map",
+        [["Select Map", 0],
+        ["Dorado", 1],
+        ["Eichenwalde", 2],
+        ["Hanamura", 3],
+        ["Hollywood", 4],
+        ["Ilios", 5],
+        ["King's Row", 6],
+        ["Lijang Tower", 7],
+        ["Nepal", 8],
+        ["Numbani", 9],
+        ["Oasis", 10],
+        ["Route 66", 11],
+        ["Temple of Anubis", 12],
+        ["Volskaya Industries", 13],
+        ["Watchpoint: Gibraltar", 14]]
+      %div.select-container#heroplayed
+        = f.label :heros, class: "field-labels", value: "Hero Played:"
+        = f.fields_for :heros do |h|
+          = h.select "hero",
+          [["Select Hero", 0],
+          ["Ana", 1],
+          ["Bastion", 2],
+          ["D.Va", 3],
+          ["Genji", 4],
+          ["Hanzo", 5],
+          ["Junkrat", 6],
+          ["Lucio", 7],
+          ["Mcree", 8],
+          ["Mei", 9],
+          ["Mercy", 10],
+          ["Pharah", 11],
+          ["Reaper", 12],
+          ["Reinhardt", 13],
+          ["Roadhog", 14],
+          ["Soldier: 76", 15],
+          ["Sombra", 16],
+          ["Symmetra", 17],
+          ["Torbjorn", 18],
+          ["Widowmaker", 19],
+          ["Winston", 20],
+          ["Zarya", 21],
+          ["Zenyatta", 22]]
+      %div.input-fields-container
+        = f.label :rank, class:"field-labels", value: "Rank"
+        = f.text_field:rank, class:"form-control input-fields",  placeholder: "Enter Your Rank\..."
+      %div.input-fields-container
+        = f.label :group_size, class:"field-labels", value: "Group Size"
+        = f.number_field:group_size, class:"form-control input-fields", placeholder: "Enter Your Group Size\..."
