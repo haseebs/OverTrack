@@ -24,6 +24,8 @@ class GroupStatsController < ApplicationController
                                      total_games: presentRow.total_games + 1)
       end
     end
+
+    #need to handle the case where user reloads the page while processing
     @matches.update_all(group_stats_updated: true)
     @group_stats = cur_user.group_stats
   end

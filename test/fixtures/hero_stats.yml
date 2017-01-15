@@ -5,7 +5,7 @@ one:
   losses: 1
   draws: 1
   total_games: 1
-  group_size: MyString
+  hero: 1
   user: one
 
 two:
@@ -13,5 +13,5 @@ two:
   losses: 1
   draws: 1
   total_games: 1
-  group_size: MyString
+  hero: 1
   user: two
