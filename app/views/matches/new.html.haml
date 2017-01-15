@@ -1,20 +1,12 @@
-%p Attributes that user needs to enter are map, heroes, rank and groupsize
-%p wow we didnt add groupsize in our erd, now I have to implement it
-%p heroes are not yet implemented on backend, so it may break, you should still be able to design it
-
-%p Attributes that user needs to enter are map, heroes, rank and groupsize
-%p wow we didnt add groupsize in our erd, now I have to implement it
-%p heroes are not yet implemented on backend, so it may break, you should still be able to design it
 %div.row
-  %div.col-sm-3.col-md-offset-3
+  %div.col-xs-6.col-xs-offset-3
     = form_for(@match) do |f|
-      = f.label :map, class:"field-labels", value: "Maps"
+      = f.label :map, class:"field-labels", value: "Map Played:"
       = f.select "map", [["Tracer", 1], ["Junkrat", 2]]
-      = f.label :heros, class: "field-labels", value: "Heros:"
+      = f.label :heros, class: "field-labels", value: "Hero Played:"
       = f.fields_for :heros do |h|
         = h.select "hero", [["Tracer", 1], ["Junkrat", 2]]
-      = f.label :rank
-      = f.text_field:rank, class:"form-control input-fields"
-
-      = f.label :group_size
-      = f.number_field:group_size, class:"form-control input-fields"
+      = f.label :rank, class:"field-labels", value: "Rank"
+      = f.text_field:rank, class:"form-control input-fields",  placeholder: "Enter Your Rank\..."
+      = f.label :group_size, class:"field-labels", value: "Group Size"
+      = f.number_field:group_size, class:"form-control input-fields", placeholder: "Enter Your Group Size\..."

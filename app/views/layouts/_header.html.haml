@@ -1,10 +1,12 @@
 %header.transparent.navbar
   %div.container
     %div#logo-holder
-      = link_to "Overtracker", '#', id: "logo"
+      = link_to "Overtracker", root_url, id: "logo"
     %nav.cs-nav
       %ul.nav.navbar-nav.navbar-right
         %li= link_to "Faqs",   '#'
-        %li= link_to "Register", '#'
+        %li= link_to "Add Match", new_match_path
+        %li= link_to "Edit User", edit_user_path(cur_user)
+        %li= link_to "Register", signup_path
         %li{:class => 'csbuttons'}
-          = link_to "Log in", '#'
+          = link_to "Log in", login_path

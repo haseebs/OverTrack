@@ -45,7 +45,10 @@ p {
   background-color: $dark;
   color: $light;
 }
+input, button, select, textarea{
+  color:$dark $imp;
 
+}
 // Header
 header{
   display: block;
