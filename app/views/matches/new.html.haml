@@ -1,6 +1,6 @@
 %h1.titletag Add New Match
 %div.row
-  %div.col-xs-6.col-xs-offset-3
+  %div.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2
     = form_for(@match) do |f|
       %div.select-container#mapsplayed
         = f.label :map, class:"field-labels", value: "Map Played:"
@@ -48,8 +48,15 @@
           ["Zarya", 21],
           ["Zenyatta", 22]]
       %div.input-fields-container
-        = f.label :rank, class:"field-labels", value: "Rank"
+        = f.label :rank, class:"field-labels", value: "Rank:"
         = f.text_field:rank, class:"form-control input-fields",  placeholder: "Enter Your Rank\..."
       %div.input-fields-container
-        = f.label :group_size, class:"field-labels", value: "Group Size"
+        = f.label :group_size, class:"field-labels", value: "Group Size:"
         = f.number_field:group_size, class:"form-control input-fields", placeholder: "Enter Your Group Size\..."
+      %div.input-fields-container
+        = f.label :video_link, class:"field-labels", value: "Video Link:"
+        = f.text_field:video_link, class:"form-control input-fields",  placeholder: "Enter Video Link\..."
+      %div
+        = f.label :notes, class:"field-labels", value: "Note:"
+        = f.text_area:notes, class:"form-control input-fields",  placeholder: "You can add some notes about the match\..."
+      = f.submit "Submit", class: "csbuttons c-btn c-btn--primary"
