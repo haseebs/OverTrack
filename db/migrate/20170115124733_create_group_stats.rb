@@ -5,8 +5,7 @@ class CreateGroupStats < ActiveRecord::Migration[5.0]
       t.integer :losses
       t.integer :draws
       t.integer :total_games
-      t.string :group_size
-      t.string :integer
+      t.integer :group_size
       t.references :user, foreign_key: true
     end
   end

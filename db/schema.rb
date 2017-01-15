@@ -10,28 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170115130048) do
+ActiveRecord::Schema.define(version: 20170115151048) do
 
   create_table "group_stats", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "wins"
     t.integer "losses"
     t.integer "draws"
     t.integer "total_games"
-    t.string  "group_size"
-    t.string  "integer"
+    t.integer "group_size"
     t.integer "user_id"
     t.index ["user_id"], name: "index_group_stats_on_user_id", using: :btree
-  end
-
-  create_table "hero_stats", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "hero"
-    t.integer "wins"
-    t.integer "loses"
-    t.integer "draws"
-    t.integer "win_ratio"
-    t.integer "total_games"
-    t.integer "user_id"
-    t.index ["user_id"], name: "index_hero_stats_on_user_id", using: :btree
   end
 
   create_table "heros", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -68,7 +56,6 @@ ActiveRecord::Schema.define(version: 20170115130048) do
   end
 
   add_foreign_key "group_stats", "users"
-  add_foreign_key "hero_stats", "users"
   add_foreign_key "heros", "matches"
   add_foreign_key "matches", "users"
 end
