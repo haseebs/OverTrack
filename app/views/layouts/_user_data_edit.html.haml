@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 %div.row
   %div.col-sm-6.col-sm-offset-3
     = form_for(@user) do |f|
@@ -11,16 +9,4 @@
       = f.password_field :password, class: "input-fields", placeholder: "Password\..."
       = f.label :password_confirmation, value: "Password Confirmation:", class: "field-labels"
       = f.password_field :password_confirmation, class: "input-fields", placeholder: "Confirm Password\..."
-      = f.submit yield(:var2), class: "csbuttons c-btn c-btn--primary"
-=======
-= form_for(@user) do |f|
-  = f.label :battletag, class: "field-labels", value: "Battle Tag:"
-  = f.text_field :battletag, class: "input-fields", placeholder: "Enter Battle Tag\..."
-  = f.label :email, class: "field-labels", value: "Email:"
-  = f.email_field :email, class: "input-fields", placeholder: "Email Address\..."
-  = f.label :password, class: "field-labels", value: "password:"
-  = f.password_field :password, class: "input-fields", placeholder: "Password\..."
-  = f.label :password_confirmation, value: "Password Confirmation:", class: "field-labels"
-  = f.password_field :password_confirmation, class: "input-fields", placeholder: "Confirm Password\..."
-  = f.submit yield(:var3), class: "csbuttons c-btn c-btn--primary"
->>>>>>> 35fbd14fa0b617c6d3ca4e7c4884d7973dda77eb
+      = f.submit yield(:var3), class: "csbuttons c-btn c-btn--primary"

@@ -3,8 +3,9 @@
 $buttons:#FC4349;
 $dark:#2C3E50;
 $light:#FFFFFF;
-$lightblue:#D7DADB;
-$blue:#6DBCDB;
+$lightblue:#3498DB;
+$blue:#2980B9;
+$mediumlight: #D7DADB;
 $white:#FFF;
 $black:#000;
 $value: E6;
@@ -55,7 +56,7 @@ header{
   background: $tsc $imp;
 }
 .transparent li a{
-  color: $lightblue;
+  color: $mediumlight;
   font-weight: bold;
 }
 .nav > li > a:hover, .nav > li > a:focus{
@@ -63,7 +64,6 @@ header{
   color: $light $imp;
   transition: all 0.2s ease-in;
 }
-
 //Custom Login link
 .nav li.csbuttons a{
   background-color: $tsc;
@@ -78,6 +78,34 @@ form input.csbuttons:hover,form form input.csbuttons:hover{
   transition: all 0.2s ease-out;
 }
 
+
+//Big Screens > 768px
+@media screen and (min-width: 768px) {
+  //navigation bar links
+  .nav > li {
+    padding: 6px 5px;
+  }
+  .nav > li > a{
+    margin: 5px;
+    padding: 5px 10px $imp;
+    border-radius: 2px;
+  }
+
+  //Custom Login button
+  .csbuttons a,
+  form input.csbuttons{
+    background-color: $lightblue $imp;
+    color: $light $imp;
+    transition: all 0.2s ease-in;
+  }
+  .nav li.csbuttons a:hover,.nav li.csbuttons a:focus{
+    background-color: $buttons+$value $imp;
+    color: $light $imp;
+    transition: background-color 0.3s ease-in;
+    transition: all 0.2s ease-out;
+  }
+
+}
 
 // Logo
 #logo-holder{
@@ -170,33 +198,6 @@ form input.csbuttons{
 }*/
 
 
-//Big Screens > 768px
-@media screen and (min-width: 768px) {
-  //navigation bar links
-  .nav > li {
-    padding: 6px 5px;
-  }
-  .nav > li > a{
-    margin: 5px;
-    padding: 5px 10px $imp;
-    border-radius: 2px;
-  }
-
-  //Custom Login button
-  .csbuttons a,
-  form input.csbuttons{
-    background-color: $blue $imp;
-    color: $light $imp;
-    transition: all 0.2s ease-in;
-  }
-  .nav li.csbuttons a:hover,.nav li.csbuttons a:focus{
-    background-color: $buttons+$value $imp;
-    color: $light $imp;
-    transition: background-color 0.3s ease-in;
-    transition: all 0.2s ease-out;
-  }
-
-}
 //middle secction
 .page-main-content{
   //margin-top: -60px;
