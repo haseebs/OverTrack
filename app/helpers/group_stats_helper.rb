@@ -1,0 +1,2 @@
+module GroupStatsHelper
+end

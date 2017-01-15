@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  has_many :matches
+  has_many :matches,     dependent: :destroy
+  has_many :group_stats, dependent: :destroy
   before_save { email.downcase! }
 
   EMAIL_REGEX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
