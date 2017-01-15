@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   include ConstantsHelper
   include StatsHelper
+  #helper :constants
 
   def user_logged_in
     if !logged_in?
