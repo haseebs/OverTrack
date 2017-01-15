@@ -1,13 +1,13 @@
-%p Match ID, Skill rating
+%p
 = match.id
 = match.rank
 = match.winstreak
 = match.losestreak
-= match.wld
+= get_wld(match.wld)
 / I will fix wld
 = match.video_link
 = match.notes
-= match.map
+= get_map_name(match.map)
 = match.group_size
-/ I will fix map too
-/ hero should be added here too when implemented
+- match.heros.each do |h|
+  = get_hero_name(h.hero)

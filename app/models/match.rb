@@ -64,4 +64,5 @@ class Match < ApplicationRecord
       self.losestreak = prev_match.losestreak
     end
   end
+
 end
