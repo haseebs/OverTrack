@@ -1,5 +1,44 @@
--if @matches.any?
-  = @matches.count
-  = render @matches
-  / or we can loop through @matches here and do something
-
+%section.white-section
+  -if @matches.any?
+    %div.tbl-header
+      %table#keywords.matchesdatatable
+        %thead
+          %tr
+            %th
+              %span
+                Match ID
+            %th
+              %span
+                Rank
+            %th
+              %span
+                W/L/D
+            %th
+              %span
+                Win Streak
+            %th
+              %span
+                Lose Streak
+            %th
+              %span
+                Map Name
+            %th
+              %span
+                Group Size
+            %th
+              %span
+                Video Link
+            %th
+              %span
+                Notes
+            %th
+              %span
+                Heros Played
+            %th
+              %span
+                Edit or Delete
+    %div.tbl-content
+      %table#keywords.matchesdatatable
+        %tbody
+          = render @matches
+    / or we can loop through @matches here and do something
