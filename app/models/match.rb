@@ -65,4 +65,22 @@ class Match < ApplicationRecord
     end
   end
 
+  def self.to_csv
+    columns = %w{id rank wld win_streak lose_streak map_name group_size video notes hero1, hero2, hero3, hero4}
+    CSV.generate(headers: true) do |csv|
+      csv << columns
+
+      # add rank changed too
+      all.each do |match|
+        num_heros = match.heros.count
+        csv_temp = [match.id, match.rank, ApplicationController.helpers.get_wld(match.wld), match.winstreak,
+                match.losestreak, ApplicationController.helpers.get_map_name(match.map), match.group_size,
+                match.video_link, match.notes]
+        num_heros.times do |i|
+          csv_temp << ApplicationController.helpers.get_hero_name(match.heros[i].hero)
+        end
+        csv << csv_temp
+      end
+    end
+  end
 end

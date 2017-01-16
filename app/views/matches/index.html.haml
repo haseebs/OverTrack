@@ -1,6 +1,10 @@
 %section.white-section
   %h1.titletag Game Statistics
   -if @matches.any?
+
+    %span.csbuttons
+      = link_to "Export to CSV", "matches.csv"
+
     %div.tbl-header
       %table#keywords.matchesdatatable
         %thead
