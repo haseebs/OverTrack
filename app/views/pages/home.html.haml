@@ -63,6 +63,7 @@
           Watch Your Stats Sign up Now!
         %h3.titledesc
           Statistics is your way to win. The world could use a hero like you.
-        %col-sm-12
-          %div.col-sm-12
-            %button.csbuttons.c-btn.c-btn--primary Sign up#{link_to "", signup_path}
+        - unless logged_in?
+          %col-sm-12
+            %div.col-sm-12
+              %button.csbuttons.c-btn.c-btn--primary Sign up#{link_to "", signup_path}
