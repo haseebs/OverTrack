@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   include ConstantsHelper
   include StatsHelper
+  include HeroStatsHelper
   #helper :constants
 
   def user_logged_in
