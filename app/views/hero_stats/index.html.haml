@@ -25,11 +25,15 @@
       %tbody.tbl-content
         = render @hero_stats
 
-- @data = [5,10,3,4,6,2,3,5,7,2,6,4,2,7,3,56,3,6,8,12,43,6,20]
+- hero_names = ['Ana', 'Bastion','D.Va','Genji','Hanzo','Junkrat','Lucio','Mcree','Mei','Mercy','Pharah','Reaper', 'Reinhardt','Roadhog','Soldier: 76','Sombra','Symmetra','Torbjorn','Tracer','Widowmaker','Winston','Zarya','Zenyatta']
+- colors = ["#104673", "#E1D5A2", "#352424", "#F9F9EB", "#9B5F43", "#635847", "#A98805", "#8a7552", "#5d3b2c", "#fff16f", "#14437c", "#191a19", "#4a4f52", "#7a797a", "#616f9c", "#b82bff", "#5f3b2b", "#90b2b4", "#b4b491", "#757fa3", "#1a1c21", "#790f2f", "#e6e5d8"]
 
 %div.container
   %div.col-xs-8.col-xs-offset-2
-    - data = {labels: @hero_names,
-      datasets: [{ data: @data,
-        backgroundColor: @colors }]}
-    = pie_chart data
+    - data = { labels: hero_names,
+      datasets: [{ data: @chart_data,
+        backgroundColor: colors,
+        borderColor: Array.new(23,'#24221F')}]}
+    - options  = { legend: { display: false },
+      title: { display: true, text: "Heros Played Distribution", fontSize: 15, padding: 15, position: 'bottom' }}
+    = pie_chart data, options
