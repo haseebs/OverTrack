@@ -1,4 +1,4 @@
-class MapHeroStatsController < ApplicationController
+  class MapHeroStatsController < ApplicationController
   before_action :user_logged_in
 
   #Handle the deletion of matches
