@@ -442,7 +442,16 @@ span.heroimage img {
     width: 30px;
     height: auto;
 }
-
+#exportbutton {
+    margin-bottom: 10px;
+    position: relative;
+    display: block;
+}
+#exportbutton a{
+  padding: 5px;
+  margin: 5px 5px 10px;
+  border-radius: 2px;
+}
 /* footer */
 
 footer {
