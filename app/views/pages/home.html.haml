@@ -2,15 +2,16 @@
   %main.hometopsec
     %div.intro-message
       %h1.main-heading
-        OverTracker Personal OverWatch Tracker
+        OverTracker Personal Game Stats Tracker
       %h3.main-heading-desc
         You gonna perform better if you know where to push
-      %div.container
-        %div.col-sm-6.col-sm-offset-3
-          %div.col-sm-6
-            %button.csbuttons.c-btn.c-btn--primary.c-btn-home #{link_to "Login", login_path}
-          %div.col-sm-6
-            %button.csbuttons.c-btn.c-btn--primary.c-btn-home #{link_to "Sign up", signup_path}
+      - unless logged_in?
+        %div.container
+          %div.col-sm-6.col-sm-offset-3
+            %div.col-sm-6
+              %button.csbuttons.c-btn.c-btn--primary.c-btn-home #{link_to "Login", login_path}
+            %div.col-sm-6
+              %button.csbuttons.c-btn.c-btn--primary.c-btn-home #{link_to "Sign up", signup_path}
 %div.container-fuild.light-theme.home-page
   %div.container
     %section.col-xs-12.col-sm-5.left.main-page-img
