@@ -14,6 +14,7 @@
           %li= link_to "Group Stats", group_stats_path
           %li= link_to "Time Stats", time_stats_path
           %li= link_to "Settings", edit_user_path(cur_user)
+          /%li= link_to "logout", logout_path
         - else
           %li= link_to "Signup", signup_path
           %li{:class => 'csbuttons'}

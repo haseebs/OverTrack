@@ -1,2 +1,66 @@
-%h1 Pages#home
-%p Find me in app/views/pages/home.html.erb
+%div.container-fuild
+  %main.hometopsec
+    %div.intro-message
+      %h1.main-heading
+        OverTracker Personal OverWatch Tracker
+      %h3.main-heading-desc
+        You gonna perform better if you know where to push
+      %div.container
+        %div.col-sm-6.col-sm-offset-3
+          %div.col-sm-6
+            %button.csbuttons.c-btn.c-btn--primary Login #{link_to "", login_path}
+          %div.col-sm-6
+            %button.csbuttons.c-btn.c-btn--primary Sign up#{link_to "", signup_path}
+%div.container-fuild.light-theme
+  %div.container
+    %section.col-xs-12.col-sm-5.left.main-page-img
+      %img{:src => image_url("imac-final.png")}
+    %section.col-xs-12.col-sm-6.right.main-page-section
+      %h1.titletag
+        Record results of your matches
+      %h3.titledesc
+        Create a new record with match results after each match to gather detailed
+        statistics on your playing skills
+  %div.container
+    %section.col-xs-12.col-sm-5.right.main-page-img
+      %img{:src => image_url("ipad-final.png")}
+    %section.col-xs-12.col-sm-6.left.main-page-section
+      %h1.titletag
+        Observe various statistics
+      %h3.titledesc
+        Know your strengths and weaknesses: Look on your performance as each
+        hero on each map and get crystal clear picture on what you should work harder
+  %div.container
+    %section.col-xs-12.col-sm-5.left.main-page-img
+      %img{:src => image_url("iphone-final.png")}
+    %section.col-xs-12.col-sm-6.right.main-page-section
+      %h1.titletag
+        Grow your Skill Rating
+      %h3.titledesc
+        Train harder on heroes and maps you want to perform better.
+        Statistics is a perfect tool to see where you should push harder
+  %div.container-fuild
+    %section.col-sm-12.awesome-container
+      %h2.awesome
+        Login to discover how awesome we are
+  %div.container
+    %section.col-sm-12.main-page-section
+      %h1.main-heading
+        Built for Gamers by Gamers
+      %h3.main-heading-desc
+        No matter your playstyle, there’s a unique hero for you.<br/>
+        Master their abilities to unlock their <br/>potential and achieve victory.
+  %div.container-fuild
+    %section.col-sm-12.bg-mountain-city.show-for-lg
+  %div.container-fuild.bg-musem
+    %div.container
+      %section.col-xs-12.col-sm-6.tracer-img.left
+        %img{:src => "http://vignette3.wikia.nocookie.net/deathbattlefanon/images/9/99/Tracer.png/revision/latest?cb=20160529142716"}/
+      %section.col-xs-12.col-sm-6.right.main-page-section.right
+        %h1.titletag
+          Watch Your Stats Sign up Now!
+        %h3.titledesc
+          Statistics is your way to win. The world could use a hero like you.
+        %col-sm-12
+          %div.col-sm-12
+            %button.csbuttons.c-btn.c-btn--primary Sign up#{link_to "", signup_path}

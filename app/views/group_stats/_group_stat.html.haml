@@ -10,5 +10,8 @@
   %td
     = win_ratio(group_stat.wins, group_stat.total_games)
     \%
+    %div.bar
+      %div.segment.segment-win{:style => "width:#{win_ratio(group_stat.wins, group_stat.total_games)}%"}
+
   %td
     = group_stat.total_games

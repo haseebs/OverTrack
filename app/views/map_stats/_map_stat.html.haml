@@ -10,8 +10,13 @@
   %td
     = win_ratio(map_stat.wins, map_stat.total_games)
     \%
+    %div.bar
+      %div.segment.segment-win{:style => "width:#{win_ratio(map_stat.wins, map_stat.total_games)}%"}
   %td
     = win_ratio(map_stat.total_games, @total_games)
     \%
+    %div.bar
+      %div.segment.segment-rating{:style => "width:#{win_ratio(map_stat.total_games, @total_games)}%"}
+
   %td
     = map_stat.total_games

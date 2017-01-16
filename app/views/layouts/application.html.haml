@@ -11,9 +11,10 @@
     = render 'layouts/header'
     %div.page-main-content
       %div.container-fuild
-        %div.container.dark-theme
+        %div.dark-theme
           = yield
-          = debug(params) if Rails.env.development?
+        /  = debug(params) if Rails.env.development?
+    = render 'layouts/footer'
     :javascript
       $(function(){
         $('#keywords').tablesorter();

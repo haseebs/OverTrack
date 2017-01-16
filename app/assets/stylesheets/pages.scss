@@ -1,3 +1,138 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+$buttons:#FC4349;
+$dark:#2C3E50;
+$light:#FFFFFF;
+$lightblue:#3498DB;
+$blue:#2980B9;
+$mediumlight: #D7DADB;
+$white:#FFF;
+$black:#000;
+$value: E6;
+$imp: !important;
+$tsc: #FFF0;
+
+//home page
+main.hometopsec {
+  position: static;
+  top: auto;
+  left: auto;
+  right: auto;
+  background-position: center top;
+  background-size: cover;
+  background-image: url('http://masteroverwatch.com/asset/image/background.jpg');
+  min-height:400px;
+  background-color: $blue;
+  margin-top: -75px;
+}
+.intro-message {
+    position: relative;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+.main-heading{
+  text-align: center $imp;
+  font-size: xx-large;
+  text-transform: uppercase;
+}
+.main-heading-desc{
+  text-align: center $imp;
+  font-size: large;
+  text-transform: uppercase;
+}
+//
+.main-page-img img{
+  width: 100%;
+  height:auto;
+}
+.right{
+  float:right $imp;
+}
+.left{
+  float:left;
+}
+.right .titletag,
+.left .titletag{
+  text-align: left $imp;
+}
+.titledesc{
+  text-align: left;
+  font-size: large;
+  font-weight: medium;
+}
+.main-page-section{
+  margin: 50px 0px;
+  padding:30px 0px 60px;
+}
+section.bg-mountain-city {
+    background-attachment: fixed;
+    min-height: 35.5em;
+    background-position: center 16%;
+    background-image: url('https://overwatch-a.akamaihd.net/img/pages/home/dorado-desktop-2cfea7233598311850e3f484a91e1d48df48496ff062b0b639595bfa217c0ce1129464b6b3e3107c165b24e99a794aa181244d4b440507e9e02a5abba3f08583.jpg');
+    margin: 0px auto;
+}
+.awesome-container{
+  background-color: $dark;
+  color:$light $imp;
+  padding: 2.5% 0px;
+  margin: 0px;
+}
+.bg-musem{
+  background-image: url('https://overwatch-a.akamaihd.net/img/bg-museum-2fe485c6cfa12dd07ebae267c34de56e6e504a3ded661dab4da27892f6639f6407c66bf577bede8448500eedd9ab620b0a899683f50da3a4849e3038312aded4.jpg');
+}
+
+.tracer-img{
+  margin-bottom: -350px;
+}
+@media screen and (min-width: 768px) {
+  .tracer-img{
+    margin-bottom: -650px;
+  }
+
+}
+.tracer-img img {
+    position: relative;
+    top: -300px;
+    width: 250px;
+    height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar {
+    margin-bottom: 100px $imp;
+  }
+}
+
+
+//table bars
+.bar {
+    background: rgba(36,45,68,0.4);
+    cursor: default;
+    font-size: 0;
+    height: 4px;
+    line-height: 0;
+    padding: 1px;
+    text-align: left;
+    width: 95%;
+}
+.bar .segment {
+    background-color: #FEFEFE;
+    display: inline-block;
+    height: 4px;
+}
+.bar .segment-win {
+    background-color: #8fbc8f;
+}
+
+.bar .segment-fire {
+    background-color: #f08080;
+}
+.bar .segment-rating {
+    background-color: #7878D4;
+}
+.bar .segment-fire {
+    background-color: #f08080;
+}

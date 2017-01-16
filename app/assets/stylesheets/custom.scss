@@ -65,6 +65,10 @@ section{
   background-color: $dark;
   color: $light;
 }
+.light-theme{
+  background-color: $light;
+  color: $dark;
+}
 input, button, select, textarea{
   color:$dark $imp;
 
@@ -73,6 +77,7 @@ input, button, select, textarea{
 header{
   display: block;
   position: relative;
+  z-index: 1;
 }
 //navigation bar
 .transparent{
@@ -95,13 +100,29 @@ header{
   transition: all 0.2s ease-in;
 }
 .nav li.csbuttons a:hover,.nav li.csbuttons a:focus,
-form input.csbuttons:hover,form form input.csbuttons:hover{
+form .csbuttons:hover,form form .csbuttons:hover{
   background-color: $buttons+$imp;
   color: $light $imp;
   transition: background-color 0.3s ease-in;
   transition: all 0.2s ease-out;
 }
+.csbuttons{
+  background-color: $tsc;
+  color:$light;
+  transition: all 0.2s ease-in;
+}
+button.csbuttons{
+  background-color: $lightblue;
+  color:$light;
+  transition: all 0.2s ease-in;
+}
 
+button.csbuttons:hover{
+  background-color: $buttons+$imp;
+  color: $light $imp;
+  transition: background-color 0.3s ease-in;
+  transition: all 0.2s ease-out;
+}
 
 //Big Screens > 768px
 @media screen and (min-width: 768px) {
@@ -117,7 +138,7 @@ form input.csbuttons:hover,form form input.csbuttons:hover{
 
   //Custom Login button
   .csbuttons a,
-  form input.csbuttons{
+  form .csbuttons{
     background-color: $lightblue $imp;
     color: $dark $imp;
     transition: all 0.2s ease-in;
@@ -253,7 +274,7 @@ form select{
     position: relative;
     display: block;
 }
-form input.csbuttons{
+form .csbuttons{
   background-color: $lightblue;
   color:$light;
   transition: all 0.2s ease-in;
@@ -363,7 +384,7 @@ table th {
 	  background-color: #1F2739;
 }
 table tr:hover {
-   background-color: #B4CEE04D;
+   background-color: #324B5CB3;
 -webkit-box-shadow: 0 6px 6px -6px #0E1119;
 	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
 	        box-shadow: 0 6px 6px -6px #0E1119;
@@ -415,7 +436,7 @@ footer {
   margin-top: 45px;
   margin-bottom: 50px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
+  border-top: none;
   color: #777;
   bottom: 0px;
   position: relative;
