@@ -26,7 +26,7 @@ main.hometopsec {
   background-image: url('http://masteroverwatch.com/asset/image/background.jpg');
   min-height:400px;
   background-color: $blue;
-  margin-top: -75px;
+  margin-top: -130px;
 }
 .intro-message {
     position: relative;
@@ -135,4 +135,13 @@ section.bg-mountain-city {
 }
 .bar .segment-fire {
     background-color: #f08080;
+}
+
+.navbar .navbar-nav {
+    display: inline-block $imp;
+    float: none $imp;
+}
+
+.navbar .navbar-collapse {
+    text-align: center $imp;
 }

@@ -1,5 +1,5 @@
 %section.white-section
-  %h1.titletag Game Statistics
+  %h1.titletag Match Statistics
   -if @matches.any?
 
     %span.csbuttons
@@ -39,9 +39,9 @@
             %th
               %span
                 Heros Played
-            %th
-              %span
-                Edit or Delete
+            /%th
+            /  %span
+            /    Edit or Delete
         %tbody.tbl-content
           = render @matches
     / or we can loop through @matches here and do something

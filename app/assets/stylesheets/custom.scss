@@ -124,6 +124,19 @@ button.csbuttons:hover{
   transition: all 0.2s ease-out;
 }
 
+//hamburger
+.navbar-toggle{
+  background-color: $lightblue $imp;
+}
+.navbar-toggle .icon-bar {
+
+    background-color: $dark;
+}
+.navbar-header {
+    float: right;
+    padding: 15px 0px 0px $imp;
+}
+
 //Big Screens > 768px
 @media screen and (min-width: 768px) {
   //navigation bar links
@@ -132,7 +145,7 @@ button.csbuttons:hover{
   }
   .nav > li > a{
     margin: 5px;
-    padding: 5px 0px $imp;
+    padding: 5px 5px $imp;
     border-radius: 2px;
   }
 
@@ -317,7 +330,7 @@ form .csbuttons{
   color: #fff;
   text-transform: none;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-top: 20px;
   font-weight: bold;
   display: block;
 }
