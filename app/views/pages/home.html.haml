@@ -5,6 +5,7 @@
         OverTracker Personal Game Stats Tracker
       %h3.main-heading-desc
         You gonna perform better if you know where to push
+
       - unless logged_in?
         %div.container
           %div.col-sm-6.col-sm-offset-3
@@ -12,6 +13,10 @@
               %button.csbuttons.c-btn.c-btn--primary.c-btn-home #{link_to "Login", login_path}
             %div.col-sm-6
               %button.csbuttons.c-btn.c-btn--primary.c-btn-home #{link_to "Sign up", signup_path}
+      - if logged_in?
+        %div.container
+          %div.col-sm-6.col-sm-offset-3
+            = render 'pages/summary'
 %div.container-fuild.light-theme.home-page
   %div.container
     %section.col-xs-12.col-sm-5.left.main-page-img
@@ -45,22 +50,23 @@
     %section.col-sm-12.awesome-container
       %h2.awesome
         Login to discover how awesome we are
-  %div.container
-    %section.col-sm-12.main-page-section
-      %h1.main-heading
-        Built for Gamers by Gamers
-      %h3.main-heading-desc
-        No matter your playstyle, there’s a unique hero for you.<br/>
-        Master their abilities to unlock their <br/>potential and achieve victory.
   %div.container-fuild
     %section.col-sm-12.bg-mountain-city.show-for-lg
+      %div.container
+        %section.col-sm-12.main-page-section
+          %h1.main-heading
+            Built for the Gamers by the Gamers!
+          %h3.main-heading-desc
+            No matter your playstyle, there’s a unique hero for you.<br/>
+            Master their abilities to unlock their <br/>potential and achieve victory.
+
   %div.container-fuild.bg-musem
     %div.container
       %section.col-xs-12.col-sm-5.tracer-img.left
         %img{:src => "http://vignette3.wikia.nocookie.net/deathbattlefanon/images/9/99/Tracer.png/revision/latest?cb=20160529142716"}/
       %section.col-xs-12.col-sm-5.right.main-page-section.right
         %h1.titletag
-          Watch Your Stats Sign up Now!
+          Watch Your Stats
         %h3.titledesc
           Statistics is your way to win. The world could use a hero like you.
         - unless logged_in?

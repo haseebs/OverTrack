@@ -78,6 +78,7 @@ section.bg-mountain-city {
     background-position: center 16%;
     background-image: url('https://overwatch-a.akamaihd.net/img/pages/home/dorado-desktop-2cfea7233598311850e3f484a91e1d48df48496ff062b0b639595bfa217c0ce1129464b6b3e3107c165b24e99a794aa181244d4b440507e9e02a5abba3f08583.jpg');
     margin: 0px auto;
+    color: $light;
 }
 .awesome-container{
   background-color: $dark;
@@ -91,11 +92,11 @@ section.bg-mountain-city {
 
 .tracer-img{
   //margin-bottom: -350px;
-  margin-top: -300px;
+  margin-top: -200px;
 }
 @media screen and (min-width: 768px) {
   .tracer-img{
-    margin-bottom: -650px;
+    margin-bottom: -600px;
   }
 
 }
