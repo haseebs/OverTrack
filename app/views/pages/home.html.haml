@@ -8,10 +8,10 @@
       %div.container
         %div.col-sm-6.col-sm-offset-3
           %div.col-sm-6
-            %button.csbuttons.c-btn.c-btn--primary Login #{link_to "", login_path}
+            %button.csbuttons.c-btn.c-btn--primary.c-btn-home #{link_to "Login", login_path}
           %div.col-sm-6
-            %button.csbuttons.c-btn.c-btn--primary Sign up#{link_to "", signup_path}
-%div.container-fuild.light-theme
+            %button.csbuttons.c-btn.c-btn--primary.c-btn-home #{link_to "Sign up", signup_path}
+%div.container-fuild.light-theme.home-page
   %div.container
     %section.col-xs-12.col-sm-5.left.main-page-img
       %img{:src => image_url("imac-final.png")}
@@ -21,15 +21,16 @@
       %h3.titledesc
         Create a new record with match results after each match to gather detailed
         statistics on your playing skills
-  %div.container
-    %section.col-xs-12.col-sm-5.right.main-page-img
-      %img{:src => image_url("ipad-final.png")}
-    %section.col-xs-12.col-sm-6.left.main-page-section
-      %h1.titletag
-        Observe various statistics
-      %h3.titledesc
-        Know your strengths and weaknesses: Look on your performance as each
-        hero on each map and get crystal clear picture on what you should work harder
+  %div.container-fuild.dark-theme
+    %div.container
+      %section.col-xs-12.col-sm-5.right.main-page-img
+        %img{:src => image_url("ipad-final.png")}
+      %section.col-xs-12.col-sm-6.left.main-page-section
+        %h1.titletag
+          Observe various statistics
+        %h3.titledesc
+          Know your strengths and weaknesses: Look on your performance as each
+          hero on each map and get crystal clear picture on what you should work harder
   %div.container
     %section.col-xs-12.col-sm-5.left.main-page-img
       %img{:src => image_url("iphone-final.png")}
@@ -54,9 +55,9 @@
     %section.col-sm-12.bg-mountain-city.show-for-lg
   %div.container-fuild.bg-musem
     %div.container
-      %section.col-xs-12.col-sm-6.tracer-img.left
+      %section.col-xs-12.col-sm-5.tracer-img.left
         %img{:src => "http://vignette3.wikia.nocookie.net/deathbattlefanon/images/9/99/Tracer.png/revision/latest?cb=20160529142716"}/
-      %section.col-xs-12.col-sm-6.right.main-page-section.right
+      %section.col-xs-12.col-sm-5.right.main-page-section.right
         %h1.titletag
           Watch Your Stats Sign up Now!
         %h3.titledesc

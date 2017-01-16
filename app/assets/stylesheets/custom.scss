@@ -65,10 +65,12 @@ section{
 .dark-theme{
   background-color: $dark;
   color: $light;
+  display: block;
 }
 .light-theme{
   background-color: $light;
   color: $dark;
+  display: block;
 }
 input, button, select, textarea{
   color: $light, $imp;
@@ -146,7 +148,7 @@ button.csbuttons:hover{
   }
   .nav > li > a{
     margin: 5px;
-    padding: 5px 5px $imp;
+    padding: 5px 15px $imp;
     border-radius: 2px;
   }
 
@@ -244,6 +246,7 @@ form select{
   font-weight: normal;
   margin: 2px auto 15px;
   transform: skew(-0.15rad);
+  color:$dark;
 }
 
 #new_match .input-fields-container{
@@ -372,17 +375,17 @@ th{
 }
 td{
   min-width: 65px;
-  padding: 5px 1px $imp;
+  padding: 7px 1px $imp;
   text-align: center $imp;
   vertical-align:middle;
   font-weight: 300;
   font-size: 12px;
   line-height: 14px;
   color: #fff;
-  border-bottom: solid 1px rgba(255,255,255,0.1);
+  border-bottom: solid 1px rgb(57, 29, 29);
 }
 td span a{
-  padding: 5px 5px;
+  padding: 5px 10px;
   border-radius: 2px;
 }
 /* Background-color of the odd rows */

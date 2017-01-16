@@ -20,7 +20,8 @@
             %li= link_to "Group", group_stats_path
             %li= link_to "Time", time_stats_path
             %li= link_to "Settings", edit_user_path(cur_user)
-            %li= link_to "Logout", logout_path, method: "delete"
+            %li{:class => 'csbuttons'}
+              = link_to "Logout", logout_path, method: "delete"
           - else
             %li= link_to "Signup", signup_path
             %li{:class => 'csbuttons'}

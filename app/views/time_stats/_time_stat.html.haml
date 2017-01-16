@@ -13,7 +13,4 @@
     %div.bar
       %div.segment.segment-win{:style => "width:#{win_ratio(time_stat.wins, time_stat.total_games)}%"}
   %td
-    = win_ratio(time_stat.total_games, @total_games)
-    \%
-    %div.bar
-      %div.segment.segment-rating{:style => "width:#{win_ratio(time_stat.wins, time_stat.total_games)}%"}
+    = time_stat.total_games
