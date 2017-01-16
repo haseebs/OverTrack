@@ -1,5 +1,34 @@
-%h1 MapHeroStats#index
-%p Find me in app/views/map_hero_stats/index.html.erb
-
-= render @map_hero_stats
-%p do this one after doing map_stats and hero_stats then you will know what fields are needed here
+%section.white-section
+  %h1 Per Map Per Hero Statistics
+  %div.tbl-header
+    %table#keywords.matchesdatatable
+      %thead
+        %tr
+          %th
+            %span
+              Map
+          %th
+            %span
+              Hero
+          %th
+            %span
+              Wins
+          %th
+            %span
+              Loses
+          %th
+            %span
+              Draws
+          %th
+            %span
+              Win Ratio
+          %th
+            %span
+              Played
+          %th
+            %span
+              Total Games
+  %div.tbl-content
+    %table#keywords.matchesdatatable
+      %tbody
+        = render @map_hero_stats
