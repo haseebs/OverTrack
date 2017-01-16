@@ -3,6 +3,11 @@ class MatchesController < ApplicationController
 
   def index
     @matches = cur_user.matches
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @matches.to_csv }
+    end
   end
 
   def new
@@ -12,11 +17,15 @@ class MatchesController < ApplicationController
   end
 
   def create
-    @match = cur_user.matches.create(matches_params)
-    @match.heros.build
+    @match = cur_user.matches.create(rank: params[:match][:rank],
+                                     map: params[:match][:map], group_size: params[:match][:group_size],
+                                     video_link: params[:match][:video_link], notes: params[:match][:notes])
+    #@match.heros.build
     if @match.save
       flash[:success] = "Match Added!"
-      redirect_to 'new'
+      hero = @match.heros.build(hero: params[:match][:heros])
+      hero.save
+      redirect_to :back# 'new'
     else
       flash[:danger] = "Match save failed"
       redirect_to 'new'
@@ -30,7 +39,8 @@ class MatchesController < ApplicationController
   end
 
   def matches_params
-    params.require(:match).permit(:rank, :video_link, :notes, :map, :group_size, heros_attributes: [:id, :hero])
+    # add wld
+    params.require(:match).permit(:wld, :rank, :video_link, :notes, :map, :group_size, heros_attributes: [:id, :hero, :match_id])
   end
 
 end

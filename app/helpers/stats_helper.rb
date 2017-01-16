@@ -15,6 +15,6 @@ module StatsHelper
   end
 
   def win_ratio(wins, total_games)
-    (wins/total_games.to_f) * 100
+    ((wins/total_games.to_f) * 100).round(2)
   end
 end
