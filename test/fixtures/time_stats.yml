@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wins: 1
+  losses: 1
+  draws: 1
+  total_games: 1
+  time_period: 1
+  user: one
+
+two:
+  wins: 1
+  losses: 1
+  draws: 1
+  total_games: 1
+  time_period: 1
+  user: two
