@@ -71,12 +71,14 @@ module ConstantsHelper
     when 18
       'Torbjorn'
     when 19
-      'Widowmaker'
+      'Tracer'
     when 20
-      'Winston'
+      'Widowmaker'
     when 21
-      'Zarya'
+      'Winston'
     when 22
+      'Zarya'
+    when 23
       'Zenyatta'
     end
   end
@@ -91,4 +93,47 @@ module ConstantsHelper
       'Draw'
     end
   end
+
+  def get_time_id(time)
+    case
+    when time >= 6 && time < 9
+      return 1
+    when time >= 9 && time < 12
+      return 2
+    when time >= 12 && time < 15
+      return 3
+    when time >= 15 && time < 18
+      return 4
+    when time >= 18 && time < 21
+      return 5
+    when time >= 21
+      return 6
+    when time >= 0 && time < 3
+      return 7
+    when time >= 3 && time < 6
+      return 8
+    end
+  end
+
+  def get_time_period(time)
+    case time
+    when 1
+      '6 - 9'
+    when 2
+      '9 - 12'
+    when 3
+      '12 - 15'
+    when 4
+      '15 - 18'
+    when 5
+      '18 - 21'
+    when 6
+      '21 - 0'
+    when 7
+      '0 - 3'
+    when 8
+      '3 - 6'
+    end
+  end
+
 end

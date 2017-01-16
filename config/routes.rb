@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   resources :hero_stats,      only: [:index]
   resources :map_stats,       only: [:index]
   resources :map_hero_stats,  only: [:index]
+  resources :time_stats,      only: [:index]
   resources :matches,         only: [:index, :new, :create, :update, :destroy]
 end

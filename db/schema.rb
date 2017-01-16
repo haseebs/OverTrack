@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170115224300) do
+ActiveRecord::Schema.define(version: 20170115232011) do
 
   create_table "group_stats", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "wins"
@@ -76,8 +76,19 @@ ActiveRecord::Schema.define(version: 20170115224300) do
     t.boolean  "hero_stats_updated",                   default: false
     t.boolean  "map_stats_updated",                    default: false
     t.boolean  "map_hero_stats_updated",               default: false
+    t.boolean  "time_stats_updated",                   default: false
     t.index ["user_id", "created_at"], name: "index_matches_on_user_id_and_created_at", using: :btree
     t.index ["user_id"], name: "index_matches_on_user_id", using: :btree
+  end
+
+  create_table "time_stats", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "wins"
+    t.integer "losses"
+    t.integer "draws"
+    t.integer "total_games"
+    t.integer "time_period"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_time_stats_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -95,4 +106,5 @@ ActiveRecord::Schema.define(version: 20170115224300) do
   add_foreign_key "map_hero_stats", "users"
   add_foreign_key "map_stats", "users"
   add_foreign_key "matches", "users"
+  add_foreign_key "time_stats", "users"
 end
