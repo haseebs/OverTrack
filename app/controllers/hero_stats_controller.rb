@@ -35,6 +35,6 @@ class HeroStatsController < ApplicationController
     end
     @matches.update_all(hero_stats_updated: true)
     @hero_stats = cur_user.hero_stats
-    @chart_data = get_chart_data(@hero_stats)
+    @chart_data = get_chart_data_hero(@hero_stats)
   end
 end
