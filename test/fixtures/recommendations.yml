@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  best_hero: 1
+  worst_hero: 1
+  best_time_period: 1
+  worst_time_period: 1
+  best_group: 1
+  worst_group: 1
+  most_played_map: 1
+  least_played_map: 1
+  best_map: 1
+  worst_map: 1
+  user: one
+
+two:
+  best_hero: 1
+  worst_hero: 1
+  best_time_period: 1
+  worst_time_period: 1
+  best_group: 1
+  worst_group: 1
+  most_played_map: 1
+  least_played_map: 1
+  best_map: 1
+  worst_map: 1
+  user: two
