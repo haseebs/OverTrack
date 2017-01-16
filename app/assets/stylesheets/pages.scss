@@ -155,3 +155,12 @@ section.bg-mountain-city {
   color:inherit $imp;
   background-color: $tsc $imp;
 }
+
+//charts
+.chart {
+    width: 40% !important;
+    height: auto !important;
+    margin: 0px auto;
+    position: relative;
+    display: block;
+}
