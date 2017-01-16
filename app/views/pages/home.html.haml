@@ -46,10 +46,11 @@
       %h3.titledesc
         Train harder on heroes and maps you want to perform better.
         Statistics is a perfect tool to see where you should push harder
-  %div.container-fuild
-    %section.col-sm-12.awesome-container
-      %h2.awesome
-        Login to discover how awesome we are
+  - unless logged_in?
+    %div.container-fuild
+      %section.col-sm-12.awesome-container
+        %h2.awesome
+          Login to discover how awesome we are
   %div.container-fuild
     %section.col-sm-12.bg-mountain-city.show-for-lg
       %div.container

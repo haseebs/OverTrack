@@ -145,7 +145,8 @@ section.bg-mountain-city {
 
 .navbar .navbar-nav {
     display: inline-block $imp;
-    float: none $imp;
+    float: right $imp;
+    padding-top: 28px;
 }
 
 .navbar .navbar-collapse {

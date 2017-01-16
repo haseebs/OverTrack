@@ -170,11 +170,11 @@ button.csbuttons:hover{
 
 // Logo
 #logo-holder{
-  display: inline-block;
+  display: block;
   margin-bottom: 0px;
   max-width: 100px;
 }
-#logo-holder img{
+#logo img{
   width: 100%;
     -ms-transform: rotate(-90);
     -webkit-transform: rotate(-90);

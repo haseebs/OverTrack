@@ -1,8 +1,8 @@
 %header.transparent.navbar
   %div.container
     %div#logo-holder
+      %a#logo{:href => root_url}
         %img{:src => image_url("logo.png"), title:"OverTracker", alt:"OverTracker"}
-          = link_to "", root_url, id: "logo"
     %nav.cs-nav
       %div.navbar-header
         %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
