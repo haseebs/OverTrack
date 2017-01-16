@@ -1,3 +1,27 @@
-%h1 TimeStats#index
-%p Find me in app/views/time_stats/index.html.erb
-= render @time_stats
+
+%section.white-section
+  %h1.titletag Time Statistics
+  %div.tbl-header
+    %table#keywords.matchesdatatable
+      %thead
+        %tr
+          %th
+            %span
+              Hero
+          %th
+            %span
+              Wins
+          %th
+            %span
+              Loses
+          %th
+            %span
+              Draws
+          %th
+            %span
+            Win Ratio
+          %th
+            %span
+            Total Games
+      %tbody.tbl-content
+        = render @time_stats

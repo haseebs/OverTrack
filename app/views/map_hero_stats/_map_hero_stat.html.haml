@@ -2,7 +2,10 @@
   %td
     = get_map_name(map_hero_stat.map)
   %td
-    = get_hero_name(map_hero_stat.hero)
+    %span.heroimage
+      %img{:src => image_url("#{get_hero_name(map_hero_stat.hero)}.png"), title:"#{get_hero_name(map_hero_stat.hero)}", alt:"#{get_hero_name(map_hero_stat.hero)}"}
+      = get_hero_name(map_hero_stat.hero)
+
   %td
     = map_hero_stat.wins
   %td
