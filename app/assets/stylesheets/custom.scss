@@ -246,7 +246,9 @@ form select{
   font-weight: normal;
   margin: 2px auto 15px;
   transform: skew(-0.15rad);
-  color:$dark;
+  color:$light;
+  background-color: $darkgrey;
+  border: none;
 }
 
 #new_match .input-fields-container{
@@ -401,7 +403,7 @@ table th {
 	  background-color: #292723;
 }
 table tr:hover {
-   background-color: #324B5CB3;
+   background-color: #38393BB3;
 -webkit-box-shadow: 0 6px 6px -6px #0E1119;
 	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
 	        box-shadow: 0 6px 6px -6px #0E1119;

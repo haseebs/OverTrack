@@ -1,28 +1,28 @@
 %h1.titletag Add New Match
-%div.row
-  %div.col-xs-8.col-xs-offset-2
-    = form_for(@match) do |f|
-      %div.select-container#mapsplayed.col-xs-12.col-sm-6
-        = f.label :map, class:"field-labels", value: "Map Played:"
-        = f.select "map",
-        [["Select Map", 0],
-        ["Dorado", 1],
-        ["Eichenwalde", 2],
-        ["Hanamura", 3],
-        ["Hollywood", 4],
-        ["Ilios", 5],
-        ["King's Row", 6],
-        ["Lijang Tower", 7],
-        ["Nepal", 8],
-        ["Numbani", 9],
-        ["Oasis", 10],
-        ["Route 66", 11],
-        ["Temple of Anubis", 12],
-        ["Volskaya Industries", 13],
-        ["Watchpoint: Gibraltar", 14]]
-      %div.select-container#herosplayed.col-xs-12.col-sm-6
-        = f.label :heros, class: "field-labels", value: "Hero Played:"
-        = f.select "heros",
+
+%div.col-xs-8.col-xs-offset-2
+  = form_for(@match) do |f|
+    %div.select-container#mapsplayed.col-xs-12.col-sm-6
+      = f.label :map, class:"field-labels", value: "Map Played:"
+      = f.select "map",
+      [["Select Map", 0],
+      ["Dorado", 1],
+      ["Eichenwalde", 2],
+      ["Hanamura", 3],
+      ["Hollywood", 4],
+      ["Ilios", 5],
+      ["King's Row", 6],
+      ["Lijang Tower", 7],
+      ["Nepal", 8],
+      ["Numbani", 9],
+      ["Oasis", 10],
+      ["Route 66", 11],
+      ["Temple of Anubis", 12],
+      ["Volskaya Industries", 13],
+      ["Watchpoint: Gibraltar", 14]]
+    %div.select-container#herosplayed.col-xs-12.col-sm-6
+      = f.label :heros, class: "field-labels", value: "Hero Played:"
+      = f.select "heros",
         [["Select Hero", 0],
         ["Ana", 1],
         ["Bastion", 2],
@@ -47,16 +47,19 @@
         ["Winston", 21],
         ["Zarya", 22],
         ["Zenyatta", 23]]
-      %div.input-fields-container.col-xs-12.col-sm-6
-        = f.label :rank, class:"field-labels", value: "Rank:"
-        = f.text_field:rank, class:"form-control input-fields",  placeholder: "Enter Your Rank\..."
-      %div.input-fields-container.col-xs-12.col-sm-6
-        = f.label :group_size, class:"field-labels", value: "Group Size:"
-        = f.number_field:group_size, class:"form-control input-fields", placeholder: "Enter Your Group Size\..."
-      %div.input-fields-container.col-xs-12
-        = f.label :video_link, class:"field-labels", value: "Video Link:"
-        = f.text_field:video_link, class:"form-control input-fields",  placeholder: "Enter Video Link\..."
-      %div.col-xs-12
-        = f.label :notes, class:"field-labels", value: "Note:"
-        = f.text_area:notes, class:"form-control input-fields",  placeholder: "You can add some notes about the match\..."
-      = f.submit "Submit", class: "csbuttons c-btn c-btn--primary"
+      %span.bs-caret
+        %span.caret
+
+    %div.input-fields-container.col-xs-12.col-sm-6
+      = f.label :rank, class:"field-labels", value: "Rank:"
+      = f.text_field:rank, class:"form-control input-fields",  placeholder: "Enter Your Rank\..."
+    %div.input-fields-container.col-xs-12.col-sm-6
+      = f.label :group_size, class:"field-labels", value: "Group Size:"
+      = f.number_field:group_size, class:"form-control input-fields", placeholder: "Enter Your Group Size\..."
+    %div.input-fields-container.col-xs-12
+      = f.label :video_link, class:"field-labels", value: "Video Link:"
+      = f.text_field:video_link, class:"form-control input-fields",  placeholder: "Enter Video Link\..."
+    %div.col-xs-12
+      = f.label :notes, class:"field-labels", value: "Note:"
+      = f.text_area:notes, class:"form-control input-fields",  placeholder: "You can add some notes about the match\..."
+    = f.submit "Submit", class: "csbuttons c-btn c-btn--primary"
