@@ -170,8 +170,15 @@ button.csbuttons:hover{
 
 // Logo
 #logo-holder{
-  display:inline-block;
+  display: inline-block;
   margin-bottom: 0px;
+  max-width: 100px;
+}
+#logo-holder img{
+  width: 100%;
+    -ms-transform: rotate(-90);
+    -webkit-transform: rotate(-90);
+    transform: rotate(-90deg);
 }
 
 // Form input fields
