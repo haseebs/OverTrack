@@ -32,7 +32,7 @@ class MatchesController < ApplicationController
       end
     else
       flash[:danger] = "Match save failed"
-      redirect_to 'new'
+      redirect_to :back
     end
   end
 
