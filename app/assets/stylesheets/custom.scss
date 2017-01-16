@@ -227,6 +227,11 @@ textarea{
   transform: skew(-0.15rad);
   margin-bottom: 25px !important;
 }
+textarea.form-control {
+    height: auto;
+    background: #2e2b28;
+    border: none;
+}
 //Form select fields
 .select-container {
     //width: 100%;
@@ -250,7 +255,29 @@ form select{
   background-color: $darkgrey;
   border: none;
 }
-
+select::-ms-expand{
+  background-color: $darkgrey;
+}
+select{
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background-color:$darkgrey;
+    outline:none;
+}
+select:hover, select:focus, select:active {
+  outline:none $imp;
+}
+a, a:focus,a:active{
+    outline:none $imp;
+}
+.bs-caret{
+    position: absolute $imp;
+    top: 31px;
+    right: 23px;
+    z-index: 0;
+}
 #new_match .input-fields-container{
   //width: 100%;
   display: inline-block;
@@ -414,7 +441,7 @@ table td:hover {
   font-weight: bold;
   box-shadow: #buttons -1px 1px;
   transform: translate3d(1px, -1px, 0);
-  transition-delay: 0s;
+  transition-dely: 0s;
 	transition-duration: 0.4s;
 	transition-property: all;
   transition-timing-function: line;
