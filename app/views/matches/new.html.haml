@@ -2,13 +2,6 @@
 %div.row
   %div.col-xs-8.col-xs-offset-2
     = form_for(@match) do |f|
-      %div.select-container#mapsplayed.col-xs-12
-        = f.label :wld, class:"field-labels", value: "Match Result:"
-        = f.select "wld",
-        [["Win", 1],
-        ["Lose", 2],
-        ["Draw", 3]]
-
       %div.select-container#mapsplayed.col-xs-12.col-sm-6
         = f.label :map, class:"field-labels", value: "Map Played:"
         = f.select "map",

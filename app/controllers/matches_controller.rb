@@ -17,7 +17,7 @@ class MatchesController < ApplicationController
   end
 
   def create
-    @match = cur_user.matches.create(wld: params[:match][:wld], rank: params[:match][:rank],
+    @match = cur_user.matches.create(rank: params[:match][:rank],
                                      map: params[:match][:map], group_size: params[:match][:group_size],
                                      video_link: params[:match][:video_link], notes: params[:match][:notes])
     #@match.heros.build
@@ -25,7 +25,7 @@ class MatchesController < ApplicationController
       flash[:success] = "Match Added!"
       hero = @match.heros.build(hero: params[:match][:heros])
       hero.save
-      redirect_to 'new'
+      redirect_to :back# 'new'
     else
       flash[:danger] = "Match save failed"
       redirect_to 'new'
