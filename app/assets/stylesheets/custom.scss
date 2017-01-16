@@ -429,12 +429,15 @@ table tr:nth-child(even) {
 table th {
 	  background-color: #292723;
 }
+table th:hover{
+      cursor: pointer;
+}
 table tr:hover {
    background-color: #38393BB3;
 -webkit-box-shadow: 0 6px 6px -6px #0E1119;
 	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
 	        box-shadow: 0 6px 6px -6px #0E1119;
-    cursor: pointer;
+
 }
 table td:hover {
   background-color: $lightblue;
@@ -564,4 +567,8 @@ font-size: 12px;
     width: 100%;
     font-size: 12px;
 }
+}
+
+.helpful{
+  font-size: x-small;
 }

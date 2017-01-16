@@ -1,7 +1,7 @@
 - if @user.errors.any?
   %div#error_explanation
     %div.alert.alert-danger
-      There are 
+      There are
       = pluralize(@user.errors.count, "error")
     %ul
       - @user.errors.full_messages.each do |msg|
