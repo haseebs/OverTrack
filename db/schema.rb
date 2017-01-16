@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170116014202) do
+ActiveRecord::Schema.define(version: 20170116072433) do
 
   create_table "group_stats", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "wins"
@@ -96,6 +96,19 @@ ActiveRecord::Schema.define(version: 20170116014202) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.index ["user_id"], name: "index_recommendations_on_user_id", using: :btree
+  end
+
+  create_table "summaries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "total_games"
+    t.integer  "lowest_sr"
+    t.integer  "highest_sr"
+    t.integer  "wins"
+    t.integer  "losses"
+    t.integer  "draws"
+    t.integer  "longest_win_streak"
+    t.integer  "longest_lose_streak"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "time_stats", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

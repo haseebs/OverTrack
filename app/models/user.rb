@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_many :map_stats,       dependent: :destroy
   has_many :map_hero_stats,  dependent: :destroy
   has_many :time_stats,      dependent: :destroy
+  has_one :summaries,        dependent: :destroy
   before_save { email.downcase! }
 
   EMAIL_REGEX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
