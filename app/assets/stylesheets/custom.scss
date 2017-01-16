@@ -64,10 +64,12 @@ section{
 .dark-theme{
   background-color: $dark;
   color: $light;
+  display: block;
 }
 .light-theme{
   background-color: $light;
   color: $dark;
+  display: block;
 }
 input, button, select, textarea{
   color:$dark $imp;
@@ -145,7 +147,7 @@ button.csbuttons:hover{
   }
   .nav > li > a{
     margin: 5px;
-    padding: 5px 5px $imp;
+    padding: 5px 15px $imp;
     border-radius: 2px;
   }
 

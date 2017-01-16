@@ -26,7 +26,7 @@ main.hometopsec {
   background-image: url('http://masteroverwatch.com/asset/image/background.jpg');
   min-height:400px;
   background-color: $blue;
-  margin-top: -130px;
+  margin-top: -135px;
 }
 .intro-message {
     position: relative;
@@ -35,12 +35,12 @@ main.hometopsec {
 }
 .main-heading{
   text-align: center $imp;
-  font-size: xx-large;
+  font-size: 4em;
   text-transform: uppercase;
 }
 .main-heading-desc{
   text-align: center $imp;
-  font-size: large;
+  font-size: 1.5em;
   text-transform: uppercase;
 }
 //
@@ -67,6 +67,9 @@ main.hometopsec {
   margin: 50px 0px;
   padding:30px 0px 60px;
 }
+.home-page .container{
+  padding: 50px 15px $imp;
+}
 section.bg-mountain-city {
     background-attachment: fixed;
     min-height: 35.5em;
@@ -85,7 +88,8 @@ section.bg-mountain-city {
 }
 
 .tracer-img{
-  margin-bottom: -350px;
+  //margin-bottom: -350px;
+  margin-top: -300px;
 }
 @media screen and (min-width: 768px) {
   .tracer-img{
@@ -95,7 +99,6 @@ section.bg-mountain-city {
 }
 .tracer-img img {
     position: relative;
-    top: -300px;
     width: 250px;
     height: auto;
 }
@@ -144,4 +147,11 @@ section.bg-mountain-city {
 
 .navbar .navbar-collapse {
     text-align: center $imp;
+}
+.c-btn-home{
+  width: 100% $imp;
+}
+.c-btn-home a{
+  color:inherit $imp;
+  background-color: $tsc $imp;
 }
