@@ -8,7 +8,7 @@ class HeroStatsController < ApplicationController
     @total_games = cur_user.matches.count
     @matches = cur_user.matches.where(hero_stats_updated: false)
     if @matches[0].nil?
-      @chart_data = get_chart_data(@hero_stats)
+      @chart_data = get_chart_data_hero(@hero_stats)
       return
     end
 

@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   include ConstantsHelper
   include StatsHelper
   include HeroStatsHelper
+  include MapStatsHelper
   #helper :constants
 
   def user_logged_in
