@@ -4,8 +4,7 @@ class Match < ApplicationRecord
   has_many :heros, dependent: :destroy
   accepts_nested_attributes_for :heros
 
-  before_validation :set_wld
-  before_validation :set_rank_change
+  before_save :set_rank_change
   before_save :set_streaks
 
   NUM_MAPS = 14
@@ -39,6 +38,7 @@ class Match < ApplicationRecord
   end
 
   def set_streaks
+    set_wld
     if prev_match.nil?
       if self.wld == 1
         self.winstreak = 1
