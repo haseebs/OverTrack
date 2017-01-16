@@ -5,13 +5,13 @@
 
 /* for custom scrollbar for webkit browser*/
 ::-webkit-scrollbar {
-  width: 6px;
+    width: 6px;
 }
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 ::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 
 $buttons:#FC4349;
@@ -133,11 +133,11 @@ button.csbuttons:hover{
 }
 .navbar-toggle .icon-bar {
 
-  background-color: $dark;
+    background-color: $dark;
 }
 .navbar-header {
-  float: right;
-  padding: 15px 0px 0px $imp;
+    float: right;
+    padding: 15px 0px 0px $imp;
 }
 
 //Big Screens > 768px
@@ -177,31 +177,31 @@ button.csbuttons:hover{
 // Form input fields
 .field-labels {
   display: block;
-  margin-right: 0%;
-  text-align: left;
-  text-transform: uppercase;
-  font-size: small;
-  word-wrap: break-word;
-  word-break: normal;
-  line-height: 1.2;
-  vertical-align: middle;
-  font-weight: lighter;
+    margin-right: 0%;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: small;
+    word-wrap: break-word;
+    word-break: normal;
+    line-height: 1.2;
+    vertical-align: middle;
+    font-weight: lighter;
 }
 input.input-fields {
-  background-color: $darkgrey;
-  border: none;
-  border-radius: 4px;
-  color: $light;
-  display: block;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 20px;
-  width: 100%;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: normal;
-  margin: 2px auto 15px;
-  transform: skew(-0.15rad);
+    background-color: $darkgrey;
+    border: none;
+    border-radius: 4px;
+    color: $light;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    width: 100%;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 2px auto 15px;
+    transform: skew(-0.15rad);
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: $darkgrey;
@@ -228,18 +228,18 @@ textarea{
   margin-bottom: 25px !important;
 }
 textarea.form-control {
-  height: auto;
-  background: #2e2b28;
-  border: none;
+    height: auto;
+    background: #2e2b28;
+    border: none;
 }
 //Form select fields
 .select-container {
-  //width: 100%;
-  display: inline-block;
-  margin: 0px auto;
+    //width: 100%;
+    display: inline-block;
+    margin: 0px auto;
 }
 form .select-container label {
-  margin-left: 2%;
+    margin-left: 2%;
 }
 form select{
   height: 40px;
@@ -260,23 +260,23 @@ select::-ms-expand{
 }
 select{
   -webkit-appearance: none;
-  -moz-appearance: none;
-  text-indent: 1px;
-  text-overflow: '';
-  background-color:$darkgrey;
-  outline:none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background-color:$darkgrey;
+    outline:none;
 }
 select:hover, select:focus, select:active {
   outline:none $imp;
 }
 a, a:focus,a:active{
-  outline:none $imp;
+    outline:none $imp;
 }
 .bs-caret{
-  position: absolute $imp;
-  top: 31px;
-  right: 23px;
-  z-index: 0;
+    position: absolute $imp;
+    top: 31px;
+    right: 23px;
+    z-index: 0;
 }
 #new_match .input-fields-container{
   //width: 100%;
@@ -291,34 +291,34 @@ a, a:focus,a:active{
 //Big Screens > 768px
 @media screen and (min-width: 768px) {
   #new_match .select-container {
-    //width: 49%;
-    margin: 0px $imp;
+      //width: 49%;
+      margin: 0px $imp;
 
   }
   #new_match #mapsplayed{
-    //width: 49%;
+      //width: 49%;
   }
   #new_match #herosplayed{
-    //width: 49%;
+      //width: 49%;
   }
 }
 
 //custom login buttons
 .c-btn {
-  width: 50%;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 20px;
-  text-align: center;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  margin: 5px auto 50px;
-  transform: skew(-0.15rad);
-  position: relative;
-  display: block;
+    width: 50%;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 5px auto 50px;
+    transform: skew(-0.15rad);
+    position: relative;
+    display: block;
 }
 form .csbuttons{
   background-color: $lightblue;
@@ -327,15 +327,15 @@ form .csbuttons{
 }
 /*
 .c-btn--primary {
-background-color: $buttons;
-background-image:linear-gradient(-180deg, $dark 0, $buttons 100%);
-color: $light;
-transition: all 0.3s ease-in;
+    background-color: $buttons;
+    background-image:linear-gradient(-180deg, $dark 0, $buttons 100%);
+    color: $light;
+    transition: all 0.3s ease-in;
 }
 .c-btn--primary:hover, .c-btn--primary:focus, {
-//background-color: $light $imp;
-color: $buttons $imp;
-transition: all 0.3s ease-in;
+    //background-color: $light $imp;
+    color: $buttons $imp;
+    transition: all 0.3s ease-in;
 }*/
 
 
@@ -385,7 +385,7 @@ table{
 }
 .tbl-header{
   background-color: rgba(255,255,255,0.3);
-}
+ }
 .tbl-content{
   height:auto;
   overflow-x:auto;
@@ -419,21 +419,22 @@ td span a{
 }
 /* Background-color of the odd rows */
 table tr:nth-child(odd) {
-  background-color: #2E2B28;
+	  background-color: #2E2B28;
 }
 
 /* Background-color of the even rows */
 table tr:nth-child(even) {
-  background-color: #2E2B28;
+	  background-color: #2E2B28;
 }
 table th {
-  background-color: #292723;
+	  background-color: #292723;
 }
 table tr:hover {
-  background-color: #38393BB3;
-  -webkit-box-shadow: 0 6px 6px -6px #0E1119;
-  -moz-box-shadow: 0 6px 6px -6px #0E1119;
-  box-shadow: 0 6px 6px -6px #0E1119;
+   background-color: #38393BB3;
+-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
+	        box-shadow: 0 6px 6px -6px #0E1119;
+    cursor: pointer;
 }
 table td:hover {
   background-color: $lightblue;
@@ -442,26 +443,26 @@ table td:hover {
   box-shadow: #buttons -1px 1px;
   transform: translate3d(1px, -1px, 0);
   transition-dely: 0s;
-  transition-duration: 0.4s;
-  transition-property: all;
+	transition-duration: 0.4s;
+	transition-property: all;
   transition-timing-function: line;
 }
 //table for matches/index.html.haml Responsive look
 @media (max-width: 800px) {
-  table.matchesdatatable th:nth-child(4),
-  table.matchesdatatable td:nth-child(4),
+table.matchesdatatable th:nth-child(4),
+table.matchesdatatable td:nth-child(4),
 
-  table.matchesdatatable th:nth-child(5),
-  table.matchesdatatable td:nth-child(5),
+table.matchesdatatable th:nth-child(5),
+table.matchesdatatable td:nth-child(5),
 
-  table.matchesdatatable th:nth-child(7),
-  table.matchesdatatable td:nth-child(7),
+table.matchesdatatable th:nth-child(7),
+table.matchesdatatable td:nth-child(7),
 
-  table.matchesdatatable th:nth-child(8),
-  table.matchesdatatable td:nth-child(8),
+table.matchesdatatable th:nth-child(8),
+table.matchesdatatable td:nth-child(8),
 
-  table.matchesdatatable th:nth-child(9),
-  table.matchesdatatable td:nth-child(9)
+table.matchesdatatable th:nth-child(9),
+table.matchesdatatable td:nth-child(9)
   {
     display: none $imp;
   }
@@ -472,13 +473,13 @@ td span a:hover{
 }
 /*Hero images in table style*/
 span.heroimage img {
-  width: 30px;
-  height: auto;
+    width: 30px;
+    height: auto;
 }
 #exportbutton {
-  margin-bottom: 10px;
-  position: relative;
-  display: block;
+    margin-bottom: 10px;
+    position: relative;
+    display: block;
 }
 #exportbutton a{
   padding: 5px;
@@ -525,16 +526,16 @@ footer ul li {
   margin-left: 5px;
 }
 footer ul li a{
-  text-transform: uppercase;
-  font-size: 12px;
+text-transform: uppercase;
+font-size: 12px;
 }
 
 //Responsive Design Changes
 @media screen and (max-width: 767px) {
   footer div nav {
-    display: inline-block !important;
-    position: relative;
-    width: 100%;
+      display: inline-block !important;
+      position: relative;
+      width: 100%;
   }
   footer ul {
     float: none;
@@ -544,7 +545,7 @@ footer ul li a{
     text-align: center;
     padding: 0px;
     display: block;
-  }
+}
   footer ul li {
     display: block;
     float: left;
@@ -554,30 +555,13 @@ footer ul li a{
     padding: 10px 0px 8px;
     text-align: center;
 
-  }
-  footer ul li a::last-element{
-    border-bottom:0px;
-  }
-  footer ul li a {
+ }
+ footer ul li a::last-element{
+   border-bottom:0px;
+ }
+ footer ul li a {
     margin: 0px auto;
     width: 100%;
     font-size: 12px;
-  }
 }
-
-
-// Error messages
-#error_explanation {
-  color: red;
-  ul {
-    color: red;
-    margin: 0 0 30px 0;
-  }
-}
-
-.field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
-  }
 }

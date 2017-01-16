@@ -1,9 +1,45 @@
-%p
-  = @total_games
-  = @lowest_sr
-  = @highest_sr
-  = @wins
-  = @losses
-  = @draws
-  = @longest_win_streak
-  = @longest_lose_streak
+%table#keywords.matchesdatatable
+  %thead.tbl-header
+    %tr
+      %th
+        %span
+          Total Games
+      %th
+        %span
+          Lowest SR
+      %th
+        %span
+          Highest SR
+      %th
+        %span
+          Wins
+      %th
+        %span
+          Loses
+      %th
+        %span
+          Draws
+      %th
+        %span
+          Longest Win Streak
+      %th
+        %span
+          Longest Lose Streak
+  %tbody.tbl-content
+    %tr
+      %td
+        = @total_games
+      %td
+        = @lowest_sr
+      %td
+        = @highest_sr
+      %td
+        = @wins
+      %td
+        = @losses
+      %td
+        = @draws
+      %td
+        = @longest_win_streak
+      %td
+        = @longest_lose_streak
