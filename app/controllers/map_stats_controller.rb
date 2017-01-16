@@ -7,7 +7,10 @@ class MapStatsController < ApplicationController
     @map_stats = cur_user.map_stats
     @total_games = cur_user.matches.count
     matches = cur_user.matches.where(map_stats_updated: false)
-    return if matches[0].nil?
+    if matches[0].nil?
+      @chart_data = get_chart_data_map(@map_stats)
+      return
+    end
 
     wldAndMap = matches.select(:wld, :map)
 
@@ -29,5 +32,6 @@ class MapStatsController < ApplicationController
     #need to handle the case where user reloads the page while processing
     matches.update_all(map_stats_updated: true)
     @map_stats = cur_user.map_stats
+    @chart_data = get_chart_data_map(@map_stats)
   end
 end

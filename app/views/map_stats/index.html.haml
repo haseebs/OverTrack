@@ -27,3 +27,17 @@
               Total Games
       %tbody.tbl-content
         = render @map_stats
+
+
+- map_names = ['Dorado', 'Eichenwalde', 'Hanamura', 'Hollywood', 'Ilios', "King's Row", 'Lijang Tower', 'Nepal', 'Numbani', 'Oasis', 'Route 66', 'Temple of Anubis', 'Volskaya Industries', 'Watchpoint: Gibraltar']
+- colors = ["#104673", "#E1D5A2", "#552424", "#F9F9EB", "#9B5F43", "#635847", "#A98805", "#8a7552", "#5d3b2c", "#fff16f", "#14437c", "#191a19", "#4a4f52", "#7a797a"]
+
+%div.container
+  %div.col-xs-8.col-xs-offset-2
+    - data = { labels: map_names,
+      datasets: [{ data: @chart_data,
+        backgroundColor: colors,
+        borderColor: Array.new(23,'#24221F')}]}
+    - options  = { legend: { display: false },
+      title: { display: true, text: "Maps Played Distribution", fontSize: 15, padding: 15, position: 'top' }}
+    = bar_chart data, options
