@@ -1,4 +1,15 @@
-%p
-
-  prepend every attribute with time_stat except @total_games
-  here you get_time_period(time_period) win, lose, draw, winratio(wins/total_games), winratio(total_games/@total_games)
+%tr
+  %td
+    = get_time_period(time_stat.time_period)
+  %td
+    = time_stat.wins
+  %td
+    = time_stat.losses
+  %td
+    = time_stat.draws
+  %td
+    = win_ratio(time_stat.wins, time_stat.total_games)
+    \%
+  %td
+    = win_ratio(time_stat.total_games, @total_games)
+    \%

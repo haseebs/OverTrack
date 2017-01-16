@@ -4,9 +4,15 @@
       = link_to "Overtracker", root_url, id: "logo"
     %nav.cs-nav
       %ul.nav.navbar-nav.navbar-right
-        %li= link_to "Faqs",   '#'
-        %li= link_to "Add New Match", new_match_path
+        //%li= link_to "Faqs",   '#'
+        %li= link_to "Add Match", new_match_path
         - if logged_in?
+          %li= link_to "Game Stats", matches_path
+          %li= link_to "Hero Stats", hero_stats_path
+          %li= link_to "Map Stats", map_stats_path
+          %li= link_to "Per Map Stats", map_hero_stats_path
+          %li= link_to "Group Stats", group_stats_path
+          %li= link_to "Time Stats", time_stats_path
           %li= link_to "Settings", edit_user_path(cur_user)
         - else
           %li= link_to "Signup", signup_path

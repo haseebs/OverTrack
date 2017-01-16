@@ -1,6 +1,8 @@
 %tr
   %td
-    = get_hero_name(hero_stat.hero)
+    %span.heroimage
+      %img{:src => image_url("#{get_hero_name(hero_stat.hero)}.png"), title:"#{get_hero_name(hero_stat.hero)}", alt:"#{get_hero_name(hero_stat.hero)}"}
+      = get_hero_name(hero_stat.hero)
     /mby put a picture infront of class or before whatever looks better
   %td
     = hero_stat.wins
