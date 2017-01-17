@@ -24,9 +24,11 @@ main.hometopsec {
   background-position: center top;
   background-size: cover;
   background-image: url('http://masteroverwatch.com/asset/image/background.jpg');
-  min-height:400px;
   background-color: $blue;
-  margin-top: -135px;
+background-color: #2980B9;
+margin-top: -250px;
+padding: 20% 3%;
+display: block;
 }
 .intro-message {
     position: relative;
@@ -37,7 +39,8 @@ main.hometopsec {
   text-align: center $imp;
   font-size: 2.5em;
   text-transform: uppercase;
-  margin-top: 50px;
+  margin-top: 15%;
+  display: block;
 }
 .main-heading-desc{
   text-align: center $imp;
@@ -110,6 +113,20 @@ section.bg-mountain-city {
   .navbar {
     margin-bottom: 100px $imp;
   }
+  .navbar .navbar-nav {
+    float: none !important;
+    padding-top: 100px;
+    text-align: center !important;
+    margin: 0px auto 180px;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+  }
+  .nav > li {
+    position: relative;
+    display: block;
+    width: 100%;
+}
 }
 
 
